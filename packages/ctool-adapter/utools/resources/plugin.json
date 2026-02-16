@@ -1,6 +1,6 @@
 {
-    "pluginName": "Ctool",
-    "description": "Ctool 程序开发常用工具",
+    "pluginName": "ctool-sec",
+    "description": "ctool-sec 程序开发常用工具-网络安全版",
     "author": "baiy",
     "homepage": "https://github.com/wpsec/Ctool-sec",
     "main": "tool.html",
@@ -15,10 +15,11 @@
     "features": [
         {
             "code": "ctool",
-            "explain": "程序开发常用工具",
+            "explain": "ctool-sec 程序开发常用工具-网络安全版",
             "cmds": [
+                "ctool-sec",
                 "ctool",
-                "程序开发常用工具"
+                "程序开发常用工具-网络安全版"
             ]
         }
     ]

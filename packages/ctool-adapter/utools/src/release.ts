@@ -30,8 +30,8 @@ type UtoolsFeature = {
 
 let utoolsFeature: Record<string, any>[] = [{
     "code": "ctool",
-    "explain": "程序开发常用工具",
-    "cmds": ['ctool', '程序开发常用工具']
+    "explain": "ctool-sec 程序开发常用工具-网络安全版",
+    "cmds": ['ctool-sec', 'ctool', '程序开发常用工具-网络安全版']
 }];
 tools.forEach(tool => {
     tool.features.forEach(feature => {
