@@ -1,48 +1,47 @@
-# 程序开发常用工具
+# 程序开发常用工具 - 网络安全版（Ctool-sec）
 
-使用过程中的任何问题或者需要新的工具欢迎提交`Issue`,新工具如果可以提供实现代码就完美了O(∩_∩)O
+在原版 Ctool 基础上集成 Payloader 数据，面向网络安全学习与授权测试场景。当前优先支持 `uTools` 下载和离线导入。
 
-## 先睹为快
+## Payloader 兼容说明
 
-![](https://cdn.jsdelivr.net/gh/baiy/Ctool@master/images/v2.0.0.png)
+- 已内置 `Payloader` 工具，入口：`其他 -> Payloader`
+- `Payloader` 页面直接读取仓库根目录下的数据文件：
+  - `Payloader/src/data/webPayloads.ts`
+  - `Payloader/src/data/intranetPayloads.ts`
+  - `Payloader/src/data/toolCommands.ts`
+- 若需同步最新 payload，可直接更新 `Payloader` 目录后重新构建
 
-## 安装使用
+> 安全免责声明：Payloader 相关内容仅用于合法授权的安全测试与学习研究，请勿用于未授权攻击。
 
-### 在线使用
+## uTools 安装与离线导入
 
-<https://ctool.dev>
+### 方式一：uTools 内下载
 
-### Chrome 安装
+- 上架后可在 uTools 插件应用市场搜索 `Ctool-sec` 下载
 
-- 在 [Chrome 应用商店](https://chrome.google.com/webstore/detail/ipfcebkfhpkjeikaammlkcnalknjahmh) 安装
+### 方式二：本地导入离线包
 
-### 微软 Edge 安装
+```bash
+# 安装依赖
+pnpm install
 
-- 在 [微软 Edge 应用商店](https://microsoftedge.microsoft.com/addons/detail/cihekagpnnadjjplgljkmkpcfiopfplc) 安装
+# 构建核心
+pnpm run build
 
-### 火狐 Firefox 安装
-
-- 在 [火狐 Firefox 应用商店](https://addons.mozilla.org/zh-CN/firefox/addon/ctool/) 安装
-
-### Utools 安装
-
-- [utools](https://u.tools/) 插件中心 搜索 `ctool`
-
-### Windows 客户端安装
-
-- 在 [Microsoft 应用商店](https://www.microsoft.com/store/apps/9P63J98XZ0M1) 安装
-
-### 其他桌面客户端安装
-
-- [点击下载](https://github.com/baiy/Ctool/releases)
-
-### aur
-
-```
-paru -S ctool-bin
+# 打包 uTools 平台
+pnpm --filter ctool-adapter-utools run platform-release
 ```
 
-## 开发
+- 打包产物默认在：`_release/ctool_utools.zip`
+- 在 uTools 中导入该离线包即可安装
+
+### plugin.json 说明
+
+- 模板文件：`packages/ctool-adapter/utools/resources/plugin.json`
+- 发布时会由 `packages/ctool-adapter/utools/src/release.ts` 写入实际 `version` 与 `features`
+- 产物中的 `plugin.json` 为可直接导入的最终配置
+
+## 开发与构建
 
 ```
 # 安装依赖
@@ -71,7 +70,7 @@ pnpm --filter ctool-adapter-utools run platform-release
 pnpm --filter ctool-adapter-web run platform-release
 ```
 
-> 打包适配平台文件存放位置: /_release
+> 打包适配平台文件存放位置：`/_release`
 
 ## 功能列表
 
@@ -111,3 +110,10 @@ pnpm --filter ctool-adapter-web run platform-release
 |Bcrypt |`加密`,`验证` |√|
 |IP网络计算器|`子网掩码各个进制表示换算,IP地址进制表示换算`  |√|
 |SQL参数填充|`Mybatis打印SQL的参数填充`|√|
+|Payloader|`Web/内网 payload 速查`,`工具命令`,`WAF/EDR 模式`,`变量替换`,`中英切换`|√|
+
+## 参考项目
+
+https://github.com/3516634930/Payloader
+
+https://github.com/baiy/Ctool

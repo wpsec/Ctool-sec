@@ -35,7 +35,7 @@ customCmds.set(
     getTool('ip').firstFeature(),
     [
         {
-            "type": "over",
+            "type": "regex",
             "match": "/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}/i",
             "minLength": 7,
             "maxLength": 15
@@ -53,4 +53,3 @@ customCmds.set(
         }
     ]
 )
-

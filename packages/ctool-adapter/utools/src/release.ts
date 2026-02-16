@@ -1,8 +1,8 @@
-import {copyCoreDist, release, replaceFileContent, version, getAdditionData} from "ctool-adapter-base";
+import {copyCoreDist, release, version, getAdditionData} from "ctool-adapter-base";
 import {tools, ToolInterface, FeatureInterface, AllLocaleStructure} from "ctool-config";
 import {CustomCmd, customCmds} from "./config";
 import {join} from "path";
-import {cpSync, mkdirSync, rmSync} from "fs";
+import {cpSync, mkdirSync, readFileSync, rmSync, writeFileSync} from "fs";
 
 const tempPath = join(__dirname, '../_temp')
 rmSync(tempPath, {recursive: true, force: true});
@@ -51,9 +51,11 @@ tools.forEach(tool => {
 });
 
 (async () => {
-    // 写入版本号
-    replaceFileContent(join(tempPath, 'plugin.json'), '##version##', version())
-    replaceFileContent(join(tempPath, 'plugin.json'), '"##features##"', JSON.stringify(utoolsFeature))
+    const pluginPath = join(tempPath, 'plugin.json');
+    const plugin = JSON.parse(readFileSync(pluginPath).toString());
+    plugin.version = version();
+    plugin.features = utoolsFeature;
+    writeFileSync(pluginPath, JSON.stringify(plugin, null, 4));
     // 发布
     console.info(`utools: ${await release(tempPath, 'utools')}`)
     // 移除临时目录
