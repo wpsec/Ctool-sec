@@ -8,10 +8,10 @@ const tempPath = join(__dirname, '../_temp')
 rmSync(tempPath, {recursive: true, force: true});
 mkdirSync(tempPath);
 
-// 核心文件
-copyCoreDist(tempPath)
 // 平台文件
 cpSync(join(__dirname, '../resources'), tempPath, {recursive: true})
+// 核心文件（后复制，避免 resources 中的模板文件覆盖真实构建产物）
+copyCoreDist(tempPath)
 
 const i18n: AllLocaleStructure = getAdditionData()['i18n']
 

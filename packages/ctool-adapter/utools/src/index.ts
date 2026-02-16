@@ -55,15 +55,18 @@ export const runtime = new (class implements PlatformRuntime {
         window.utools.onPluginEnter(({ code, type, payload }) => {
             window.utools.showMainWindow();
             if (!code.includes("ctool-")) {
+                initializer.push("/");
                 return;
             }
             const [, _tool, _feature] = code.split("-");
             if (!toolExists(_tool)) {
+                initializer.push("/");
                 return;
             }
 
             const tool = getTool(_tool);
             if (!tool.existFeature(_feature)) {
+                initializer.push("/");
                 return;
             }
             const feature = tool.getFeature(_feature);
