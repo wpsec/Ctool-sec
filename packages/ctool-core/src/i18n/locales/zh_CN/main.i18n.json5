@@ -7,6 +7,7 @@
     "category_check": "校验",
     "category_generate": "生成",
     "category_other": "其他",
+    "category_payload": "Payload",
     // ui
     "ui_ok": "确认",
     "ui_error": "错误: {0}",

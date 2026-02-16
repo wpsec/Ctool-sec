@@ -1,5 +1,5 @@
 // 分类 定义
-const _categories = ["encryption", "conversion", "encoder_decoder", "check", "generate", "other"] as const;
+const _categories = ["encryption", "check", "encoder_decoder", "conversion", "generate", "other", "payload"] as const;
 
 // 工具 - 功能 - 父目录 定义
 export let _tools = {
@@ -216,7 +216,8 @@ export const _categoryTool: Record<CategoryType, ToolType[]> = {
     encoder_decoder: ["base64", "url", "unicode", "jwt", "hexString", "html", "gzip", "asn1", "punycode"],
     conversion: ["json", "pinyin", "radix", "serialize", "unit", "time", "ascii", "variableConversion", "hexString", "arm", "httpSnippet", "color", "urlParse", "dockerCompose", "zhNumber"],
     generate: ["qrCode", "barcode", "randomString", "uuid", "binary", "ipcalc", "sqlFillParameter", "httpSnippet"],
-    other: ["ip", "code", "websocket", "unit", "text", "payloader"],
+    other: ["ip", "code", "websocket", "unit", "text"],
+    payload: ["payloader"],
 };
 
 // 默认常用

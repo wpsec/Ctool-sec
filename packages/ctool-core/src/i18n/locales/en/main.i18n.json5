@@ -7,6 +7,7 @@
     "category_check": "Validator",
     "category_generate": "Generate",
     "category_other": "Other",
+    "category_payload": "Payload",
     // ui
     "ui_ok": "Ok",
     "ui_error": "Error: {0}",

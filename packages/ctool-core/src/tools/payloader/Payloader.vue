@@ -54,7 +54,7 @@
             <div class="ctool-payloader-vars" v-if="showVariables">
                 <div class="ctool-payloader-vars-item" v-for="variable in globalVariables" :key="variable.key">
                     <div class="ctool-payloader-vars-top">
-                        <span class="ctool-payloader-vars-key">{{ `{${variable.key}}` }}</span>
+                        <span class="ctool-payloader-vars-key">{{ "{" + variable.key + "}" }}</span>
                         <span class="ctool-payloader-vars-desc">{{ text(variable.description) }}</span>
                     </div>
                     <input class="ctool-payloader-vars-input" v-model="variable.value" />

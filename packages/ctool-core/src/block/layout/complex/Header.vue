@@ -1,7 +1,9 @@
 <template>
     <div class="ctool-header">
         <div class="ctool-header-top">
-            <Github />
+            <div class="ctool-header-top-brand">
+                <Github />
+            </div>
             <div class="ctool-header-top-left">
                 <div
                     v-for="name in allCategories"
@@ -135,23 +137,40 @@ watch(() => {
     overflow: hidden;
 }
 
-.ctool-header-top-left {
+.ctool-header-top-brand {
     display: inline-flex;
     align-items: center;
+}
+
+.ctool-header-top-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-width: 0;
     padding-left: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.ctool-header-top-left::-webkit-scrollbar {
+    display: none;
 }
 
 .ctool-header-top-right {
     display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .ctool-header-category {
     font-size: 14px;
     display: inline-flex;
+    flex: 0 0 auto;
     height: 100%;
     align-items: center;
-    padding: 0 .85rem;
+    white-space: nowrap;
+    padding: 0 .65rem;
     cursor: pointer;
 }
 [data-locale="en"] .ctool-header-category{
@@ -209,6 +228,25 @@ watch(() => {
 .ctool-header-feature-current {
     color: var(--ctool-primary);
     border-bottom: 2px solid var(--ctool-primary);
+}
+
+@media (max-width: 820px) {
+    .ctool-header-top {
+        grid-template-columns: minmax(0px, 1fr) auto;
+    }
+
+    .ctool-header-top-brand {
+        display: none;
+    }
+
+    .ctool-header-top-left {
+        padding-left: 0;
+    }
+
+    .ctool-header-category {
+        font-size: 13px;
+        padding: 0 .45rem;
+    }
 }
 
 </style>
