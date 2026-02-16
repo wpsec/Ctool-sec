@@ -1,0 +1,22 @@
+{
+    "search_placeholder": "Search Payload / Tool / Tag / Command",
+    "tab_payloads": "Payloads",
+    "tab_tools": "Tool Commands",
+    "mode": "Mode",
+    "mode_normal": "Normal",
+    "mode_waf": "WAF Bypass",
+    "mode_edr": "EDR Evasion",
+    "mode_fallback": "No dedicated commands for {0}. Fallback to {1}.",
+    "variables": "Global Variables",
+    "detail": "Details",
+    "category": "Category",
+    "subcategory": "Sub-category",
+    "prerequisites": "Prerequisites",
+    "commands": "Commands",
+    "installation": "Installation",
+    "copy": "Copy",
+    "opsec": "OpSec Tips",
+    "references": "References",
+    "no_result": "No matching results",
+    "no_result_detail": "Select an item from the list on the left"
+}

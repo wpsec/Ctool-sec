@@ -1,0 +1,22 @@
+{
+    "search_placeholder": "搜索 Payload / 工具 / 标签 / 命令",
+    "tab_payloads": "Payload",
+    "tab_tools": "工具命令",
+    "mode": "模式",
+    "mode_normal": "标准",
+    "mode_waf": "WAF 绕过",
+    "mode_edr": "EDR 免杀",
+    "mode_fallback": "{0} 模式无专用命令，已自动回退到 {1} 模式",
+    "variables": "全局变量",
+    "detail": "详情",
+    "category": "分类",
+    "subcategory": "子分类",
+    "prerequisites": "前置条件",
+    "commands": "命令",
+    "installation": "安装方法",
+    "copy": "复制",
+    "opsec": "OpSec 提示",
+    "references": "参考资料",
+    "no_result": "没有匹配结果",
+    "no_result_detail": "请在左侧选择一个条目"
+}
