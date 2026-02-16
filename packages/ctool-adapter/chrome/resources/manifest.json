@@ -4,7 +4,7 @@
     "version": "##version##",
     "author": "wo@baiy.org",
     "offline_enabled": true,
-    "homepage_url": "https://github.com/baiy/Ctool",
+    "homepage_url": "https://github.com/wpsec/Ctool-sec",
     "manifest_version": 3,
     "default_locale": "zh_CN",
     "action": {

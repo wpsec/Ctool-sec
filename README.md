@@ -116,4 +116,4 @@ pnpm --filter ctool-adapter-web run platform-release
 
 https://github.com/3516634930/Payloader
 
-https://github.com/baiy/Ctool
+https://github.com/wpsec/Ctool-sec

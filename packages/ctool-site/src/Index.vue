@@ -25,7 +25,7 @@
                     <Tooltip :content="translation('suggest')">
                         <a
                             class="ctool-suggest ctool-hover-opacity"
-                            href="https://github.com/baiy/Ctool/issues/new"
+                            href="https://github.com/wpsec/Ctool-sec/issues/new"
                             target="_blank"
                         >
                             <Suggest />
@@ -45,7 +45,7 @@
                             {{ translation("install") }}
                         </a>
                         <a
-                            href="https://github.com/baiy/Ctool/releases/latest"
+                            href="https://github.com/wpsec/Ctool-sec/releases/latest"
                             target="_blank"
                             class="ctool-hover-opacity"
                         >
@@ -67,7 +67,7 @@
                         </Tooltip>
                         <Tooltip :content="`Mac OS ${translation('application')}`">
                             <a
-                                href="https://github.com/baiy/Ctool/releases/latest"
+                                href="https://github.com/wpsec/Ctool-sec/releases/latest"
                                 target="_blank"
                                 class="ctool-hover-opacity"
                             >
@@ -76,7 +76,7 @@
                         </Tooltip>
                         <Tooltip :content="`Linux ${translation('application')}`">
                             <a
-                                href="https://github.com/baiy/Ctool/releases/latest"
+                                href="https://github.com/wpsec/Ctool-sec/releases/latest"
                                 target="_blank"
                                 class="ctool-hover-opacity ctool-platform-bg"
                             >
@@ -112,7 +112,7 @@
                         </Tooltip>
                         <Tooltip :content="`Utools ${translation('extension')}`">
                             <a
-                                href="https://github.com/baiy/Ctool#utools-%E5%AE%89%E8%A3%85"
+                                href="https://github.com/wpsec/Ctool-sec#utools-%E5%AE%89%E8%A3%85"
                                 target="_blank"
                                 class="ctool-platform-bg ctool-hover-opacity"
                             >
@@ -173,7 +173,7 @@
             <span></span>
             <h3>{{ translation(`contribution_1`) }}</h3>
             <p>{{ translation(`contribution_2`) }}</p>
-            <a href="https://github.com/baiy/Ctool" class="ctool-contribution-button ctool-hover-opacity">
+            <a href="https://github.com/wpsec/Ctool-sec" class="ctool-contribution-button ctool-hover-opacity">
                 <Github />
                 <span>Ctool Github</span>
             </a>

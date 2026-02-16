@@ -2,10 +2,10 @@
     "pluginName": "Ctool",
     "description": "Ctool 程序开发常用工具",
     "author": "baiy",
-    "homepage": "https://github.com/baiy/Ctool",
+    "homepage": "https://github.com/wpsec/Ctool-sec",
     "main": "tool.html",
     "version": "0.0.0",
-    "logo": "icon/icon_utools.png",
+    "logo": "logo.png",
     "pluginSetting": {
         "single": false
     },
