@@ -7,7 +7,7 @@
         "build": "pnpm exec tsup-node",
         "release": "node dist/release.js",
         "adapter-build": "pnpm run build",
-        "platform-release": "pnpm run release"
+        "platform-release": "pnpm run build && pnpm run release"
     },
     "dependencies": {
         "ctool-adapter-base": "workspace:*",

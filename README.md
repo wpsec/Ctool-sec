@@ -1,36 +1,67 @@
 # 程序开发常用工具 - 网络安全版（Ctool-sec）
-
 在原版 Ctool 基础上集成 Payloader 数据，面向网络安全学习与授权测试场景。当前优先支持 `uTools` 下载和离线导入。
 
-## Payloader 兼容说明
 
-- 已内置 `Payloader` 工具，入口：`其他 -> Payloader`
-- `Payloader` 页面直接读取仓库根目录下的数据文件：
-  - `Payloader/src/data/webPayloads.ts`
-  - `Payloader/src/data/intranetPayloads.ts`
-  - `Payloader/src/data/toolCommands.ts`
-- 若需同步最新 payload，可直接更新 `Payloader` 目录后重新构建
+
+新增一级分类 Payload，与常用/加解密/校验/编解码/转换/生成/其他并列。
+
+集成 Payloader 数据，支持 Web 与内网 Payload 快速检索与查看。
+
+支持 Normal / WAF / EDR 三种模式切换。
+
+支持全局变量替换（如 TARGET_IP、DOMAIN 等）。
+
+支持中英双语展示。
+
+优化 uTools 窗口适配，默认窗口下分类展示更稳定。
+
+完善插件打包与导入流程，优化 plugin.json 配置。
+
+ctool-sec 是基于 Ctool 的网络安全增强版工具箱，面向安全学习与授权测试场景。
+
+内置常见编码、加解密、校验、转换、生成等开发工具，并新增 Payload 分类，集成大量 Web/内网渗透 Payload 与工具命令速查，支持 WAF/EDR 模式、变量替换和中英切换，提升实战与学习效率。
+
+
+
+免责声明：仅用于合法授权的安全测试与学习研究，请勿用于未授权攻击。
+
+项目地址：[https://github.com/wpsec/Ctool-sec](https://github.com/wpsec/Ctool-sec)
+
+ref：
+
+[https://github.com/baiy/Ctool](https://github.com/baiy/Ctool)
+
+[https://github.com/3516634930/Payloader](https://github.com/3516634930/Payloader)
+
+## Payloader 兼容说明
++ 已内置 `Payloader` 工具，入口：`其他 -> Payloader`
++ `Payloader` 页面直接读取仓库根目录下的数据文件：
+    - `Payloader/src/data/webPayloads.ts`
+    - `Payloader/src/data/intranetPayloads.ts`
+    - `Payloader/src/data/toolCommands.ts`
++ 若需同步最新 payload，可直接更新 `Payloader` 目录后重新构建
 
 > 安全免责声明：Payloader 相关内容仅用于合法授权的安全测试与学习研究，请勿用于未授权攻击。
+>
 
 ## uTools 安装与离线导入
-
 ### 方式一：uTools 内下载
++ 上架后可在 uTools 插件应用市场搜索 `Ctool-sec` 下载（年后审批后上平台）
 
-- 上架后可在 uTools 插件应用市场搜索 `Ctool-sec` 下载（年后审批后上平台）
+
 
 <!-- 这是一张图片，ocr 内容为： -->
+![](https://cdn.nlark.com/yuque/0/2026/png/27875807/1772156569091-4bb697d6-97c3-44fa-9b36-0ae8e5cfe162.png)
 
+<!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/27875807/1771258105828-321c4437-a548-4fbc-9ca7-2c87281ea61d.png)
 
 因为内容过多，建议大家配置自动分离独立窗口、拉大使用～
 
 <!-- 这是一张图片，ocr 内容为： -->
-
 ![](https://cdn.nlark.com/yuque/0/2026/png/27875807/1771258148827-5a53cb24-f52e-424d-b8c5-feb2d9074e49.png)
 
 ### 方式二：本地导入离线包
-
 ```bash
 # 安装依赖
 pnpm install
@@ -42,21 +73,18 @@ pnpm run build
 pnpm --filter ctool-adapter-utools run platform-release
 ```
 
-- 打包产物默认在：`_release/ctool_utools.zip`
-- 在 uTools 中导入该离线包即可安装
++ 打包产物默认在：`_release/ctool_utools.zip`
++ 在 uTools 中导入该离线包即可安装
 
 <!-- 这是一张图片，ocr 内容为： -->
-
 ![](https://cdn.nlark.com/yuque/0/2026/png/27875807/1771257380230-c4f60ae7-fc15-4e96-b427-70d9a777155a.png)
 
 ### plugin.json 说明
-
-- 模板文件：`packages/ctool-adapter/utools/resources/plugin.json`
-- 发布时会由 `packages/ctool-adapter/utools/src/release.ts` 写入实际 `version` 与 `features`
-- 产物中的 `plugin.json` 为可直接导入的最终配置
++ 模板文件：`packages/ctool-adapter/utools/resources/plugin.json`
++ 发布时会由 `packages/ctool-adapter/utools/src/release.ts` 写入实际 `version` 与 `features`
++ 产物中的 `plugin.json` 为可直接导入的最终配置
 
 ## 开发与构建
-
 ```plain
 # 安装依赖
 pnpm install
@@ -85,49 +113,50 @@ pnpm --filter ctool-adapter-web run platform-release
 ```
 
 > 打包适配平台文件存放位置：`/_release`
+>
 
 ## 功能列表
+| 功能 | 说明 | 离线使用 |
+| --- | --- | --- |
+| 哈希 | `md5`, `sha1`, `sha256`, `sha512`,`sm3`,`批量处理`,`支持文件` | √ |
+| 加密/解密 | `AES`,`DES`,`RC4`,`Rabbit`,`TripleDes`,`sm2`,`sm4` | √ |
+| BASE64编码 | `加密`,`解密`,`支持文件` | √ |
+| URL编码 | `编码`,`解码` | √ |
+| 时间 | `时间戳双向转换`,`毫秒` ,`时区`,`时间计算器` | √ |
+| 二维码 | `生成`,`解析` | √ |
+| 条形码 | `生成` | √ |
+| 汉字转拼音 | `声调`,`首字母`,`分隔符` | √ |
+| IP地址查询 | `运营商`,`城市` | × |
+| 代码格式化 | `js`, `ts`, `html`, `css`, `less`, `scss`, `graphql`, `vue`, `angular`, `markdown`, `json5`, `xml`, `yaml`, `sql`, `压缩` | √ |
+| Unicode | `双向转换`,`emoji`,`html 实体`,`css 实体` | √ |
+| 进制转换 | `2-64进制` | √ |
+| 正则表达式 | `匹配`,`查找`,`替换` | √ |
+| 随机字符生成器 | `批量`,`特殊字符` | √ |
+| 序列化转换 | `json`, `xml`, `yaml`, `phpArray`, `phpSerialize`, `properties` | √ |
+| 文本差异化对比 | `行`,`单词`,`css` | √ |
+| crontab校验 | `Crontab`,`规则`,`校验`,`例子` | √ |
+| websocket调试 | `websocket`,`在线调试` | × |
+| 单位换算 | `长度`,`面积`,`体积`,`质量`,`温度`,`压力`,`功率`,`功`,`密度`,`力`,`时间`,`速度`,`数据存储`,`角度` | √ |
+| 时间计算器 | - | √ |
+| JSON工具 | `格式化`,`校验`,`压缩`,`转义`,`去除转义`,`Unicode转中文`,`中文转Unicode`,`转GET参数`,`Java`, `C#`, `Go`, `Dart`,`csv`,`table`,`Protobuf`,`jsonpath` | √ |
+| UUID | `在线生成uuid` | √ |
+| ascii编码转换 | `十进制`, `十六进制`, `八进制`, `二进制`, `字符串` | √ |
+| 变量名格式转换 | `Var Name`, `var-name`, `VAR_NAME`, `VarName`, `varName`, `var_name`, `var name` | √ |
+| jwt解码 | `header`, `payload` | √ |
+| Hex/String转换 | `hex to string`, `string to hex`, `十六进制转字符串`, `字符串转十六进制` | √ |
+| Hex/Base64转换 | `hex to Base64`, `Base64 to hex` | √ |
+| 文本处理 | `大小写转换`, `中英文标点转换`, `简繁转换`, `替换`, `字符统计`, `行去重`, `添加行号`, `行排序`, `过滤行首尾不可见字符`,`过滤空行` | √ |
+| html编码 | - | √ |
+| 原码/反码/补码 | `生成` | √ |
+| ARM/HEX | `互转` | × |
+| Bcrypt | `加密`,`验证` | √ |
+| IP网络计算器 | `子网掩码各个进制表示换算,IP地址进制表示换算` | √ |
+| SQL参数填充 | `Mybatis打印SQL的参数填充` | √ |
+| Payloader | `Web/内网 payload 速查`,`工具命令`,`WAF/EDR 模式`,`变量替换`,`中英切换` | √ |
 
-| 功能           | 说明                                                                                                                                                | 离线使用 |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| 哈希           | `md5`, `sha1`, `sha256`, `sha512`,`sm3`,`批量处理`,`支持文件`                                                                                       | √        |
-| 加密/解密      | `AES`,`DES`,`RC4`,`Rabbit`,`TripleDes`,`sm2`,`sm4`                                                                                                  | √        |
-| BASE64编码     | `加密`,`解密`,`支持文件`                                                                                                                            | √        |
-| URL编码        | `编码`,`解码`                                                                                                                                       | √        |
-| 时间           | `时间戳双向转换`,`毫秒` ,`时区`,`时间计算器`                                                                                                        | √        |
-| 二维码         | `生成`,`解析`                                                                                                                                       | √        |
-| 条形码         | `生成`                                                                                                                                              | √        |
-| 汉字转拼音     | `声调`,`首字母`,`分隔符`                                                                                                                            | √        |
-| IP地址查询     | `运营商`,`城市`                                                                                                                                     | ×        |
-| 代码格式化     | `js`, `ts`, `html`, `css`, `less`, `scss`, `graphql`, `vue`, `angular`, `markdown`, `json5`, `xml`, `yaml`, `sql`, `压缩`                           | √        |
-| Unicode        | `双向转换`,`emoji`,`html 实体`,`css 实体`                                                                                                           | √        |
-| 进制转换       | `2-64进制`                                                                                                                                          | √        |
-| 正则表达式     | `匹配`,`查找`,`替换`                                                                                                                                | √        |
-| 随机字符生成器 | `批量`,`特殊字符`                                                                                                                                   | √        |
-| 序列化转换     | `json`, `xml`, `yaml`, `phpArray`, `phpSerialize`, `properties`                                                                                     | √        |
-| 文本差异化对比 | `行`,`单词`,`css`                                                                                                                                   | √        |
-| crontab校验    | `Crontab`,`规则`,`校验`,`例子`                                                                                                                      | √        |
-| websocket调试  | `websocket`,`在线调试`                                                                                                                              | ×        |
-| 单位换算       | `长度`,`面积`,`体积`,`质量`,`温度`,`压力`,`功率`,`功`,`密度`,`力`,`时间`,`速度`,`数据存储`,`角度`                                                   | √        |
-| 时间计算器     | -                                                                                                                                                   | √        |
-| JSON工具       | `格式化`,`校验`,`压缩`,`转义`,`去除转义`,`Unicode转中文`,`中文转Unicode`,`转GET参数`,`Java`, `C#`, `Go`, `Dart`,`csv`,`table`,`Protobuf`,`jsonpath` | √        |
-| UUID           | `在线生成uuid`                                                                                                                                      | √        |
-| ascii编码转换  | `十进制`, `十六进制`, `八进制`, `二进制`, `字符串`                                                                                                  | √        |
-| 变量名格式转换 | `Var Name`, `var-name`, `VAR_NAME`, `VarName`, `varName`, `var_name`, `var name`                                                                    | √        |
-| jwt解码        | `header`, `payload`                                                                                                                                 | √        |
-| Hex/String转换 | `hex to string`, `string to hex`, `十六进制转字符串`, `字符串转十六进制`                                                                            | √        |
-| Hex/Base64转换 | `hex to Base64`, `Base64 to hex`                                                                                                                    | √        |
-| 文本处理       | `大小写转换`, `中英文标点转换`, `简繁转换`, `替换`, `字符统计`, `行去重`, `添加行号`, `行排序`, `过滤行首尾不可见字符`,`过滤空行`                   | √        |
-| html编码       | -                                                                                                                                                   | √        |
-| 原码/反码/补码 | `生成`                                                                                                                                              | √        |
-| ARM/HEX        | `互转`                                                                                                                                              | ×        |
-| Bcrypt         | `加密`,`验证`                                                                                                                                       | √        |
-| IP网络计算器   | `子网掩码各个进制表示换算,IP地址进制表示换算`                                                                                                       | √        |
-| SQL参数填充    | `Mybatis打印SQL的参数填充`                                                                                                                          | √        |
-| Payloader      | `Web/内网 payload 速查`,`工具命令`,`WAF/EDR 模式`,`变量替换`,`中英切换`                                                                             | √        |
 
 ## 参考项目
-
 [https://github.com/3516634930/Payloader](https://github.com/3516634930/Payloader)
 
 [https://github.com/wpsec/Ctool-sec](https://github.com/wpsec/Ctool-sec)
+

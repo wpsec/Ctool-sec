@@ -1,8 +1,8 @@
-import {copyCoreDist, release, version, getAdditionData} from "ctool-adapter-base";
+import {copyCoreDist, getPath, release, version, getAdditionData} from "ctool-adapter-base";
 import {tools, ToolInterface, FeatureInterface, AllLocaleStructure} from "ctool-config";
 import {CustomCmd, customCmds} from "./config";
 import {join} from "path";
-import {cpSync, mkdirSync, readFileSync, rmSync, writeFileSync} from "fs";
+import {cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync} from "fs";
 
 const tempPath = join(__dirname, '../_temp')
 rmSync(tempPath, {recursive: true, force: true});
@@ -12,6 +12,11 @@ mkdirSync(tempPath);
 cpSync(join(__dirname, '../resources'), tempPath, {recursive: true})
 // 核心文件（后复制，避免 resources 中的模板文件覆盖真实构建产物）
 copyCoreDist(tempPath)
+const toolHtmlPath = join(tempPath, 'tool.html');
+const toolHtml = readFileSync(toolHtmlPath).toString();
+if (!existsSync(join(tempPath, 'assets')) || toolHtml.includes('当前目录仅包含 uTools 模板资源')) {
+    throw new Error('uTools release package is invalid. Please run "pnpm run build && pnpm --filter ctool-adapter-utools run platform-release".');
+}
 
 const i18n: AllLocaleStructure = getAdditionData()['i18n']
 
@@ -53,11 +58,19 @@ tools.forEach(tool => {
 (async () => {
     const pluginPath = join(tempPath, 'plugin.json');
     const plugin = JSON.parse(readFileSync(pluginPath).toString());
-    plugin.version = version();
+    const currentVersion = version();
+    plugin.version = currentVersion;
     plugin.features = utoolsFeature;
     writeFileSync(pluginPath, JSON.stringify(plugin, null, 4));
+    // 额外输出一个可直接用于 uTools 打包 .upxs 的目录，避免误用 resources 模板目录
+    const releaseRoot = getPath('_release');
+    mkdirSync(releaseRoot, {recursive: true});
+    const upxsSourcePath = join(releaseRoot, `Ctool-sec-${currentVersion}-upxs-src`);
+    rmSync(upxsSourcePath, {recursive: true, force: true});
+    cpSync(tempPath, upxsSourcePath, {recursive: true});
     // 发布
     console.info(`utools: ${await release(tempPath, 'utools')}`)
+    console.info(`utools-upxs-source: ${upxsSourcePath}`)
     // 移除临时目录
     rmSync(tempPath, {recursive: true, force: true});
 })()
