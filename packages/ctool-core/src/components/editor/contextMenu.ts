@@ -106,34 +106,51 @@ const menuDefinition = (): {
 
 class contextMenu {
     private editor: monaco.editor.IStandaloneCodeEditor;
+    private disposed = false;
+    private removeDefaultMenuTimer: ReturnType<typeof setTimeout> | null = null;
+    private disposables: monaco.IDisposable[] = [];
+    private contextKeys: Map<string, ReturnType<monaco.editor.IStandaloneCodeEditor["createContextKey"]>> = new Map();
 
     private handles: { [key in contextMenuType]?: menuHandle } = {};
 
     constructor(editor: monaco.editor.IStandaloneCodeEditor) {
         this.editor = editor;
         this.initMenu();
-        this.editor.onDidChangeModelLanguage(e => {
+        this.disposables.push(this.editor.onDidChangeModelLanguage(e => {
+            if (this.disposed) {
+                return;
+            }
             this.toggle("ctool_beautify", formatter.isEnable(e.newLanguage, "beautify"));
             this.toggle("ctool_compress", formatter.isEnable(e.newLanguage, "compress"));
             this.removeDefaultMenu();
-        });
+        }));
+        this.disposables.push(this.editor.onDidDispose(() => this.dispose()));
         this.removeDefaultMenu();
     }
 
     private removeDefaultMenu() {
-        setTimeout(() => {
+        if (this.removeDefaultMenuTimer) {
+            clearTimeout(this.removeDefaultMenuTimer);
+        }
+        this.removeDefaultMenuTimer = setTimeout(() => {
+            if (this.disposed) {
+                return;
+            }
             // 移除多余右键菜单
-            this.editor.createContextKey("editorHasDocumentFormattingProvider", false);
+            this.setContextKey("editorHasDocumentFormattingProvider", false);
             // this.editor.createContextKey("editorHasDocumentSymbolProvider", false);
-            this.editor.createContextKey("editorHasReferenceProvider", false);
-            this.editor.createContextKey("editorHasDefinitionProvider", false);
-            this.editor.createContextKey("editorHasDocumentSelectionFormattingProvider", false);
-            this.editor.createContextKey("editorHasMultipleDocumentFormattingProvider", false);
-            this.editor.createContextKey("editorHasMultipleDocumentSelectionFormattingProvider", false);
+            this.setContextKey("editorHasReferenceProvider", false);
+            this.setContextKey("editorHasDefinitionProvider", false);
+            this.setContextKey("editorHasDocumentSelectionFormattingProvider", false);
+            this.setContextKey("editorHasMultipleDocumentFormattingProvider", false);
+            this.setContextKey("editorHasMultipleDocumentSelectionFormattingProvider", false);
         }, 200);
     }
 
     initMenu() {
+        if (this.disposed) {
+            return;
+        }
         let index = 1000;
         menuDefinition().forEach(item => {
             const action: monaco.editor.IActionDescriptor = {
@@ -143,6 +160,9 @@ class contextMenu {
                 contextMenuGroupId: item.contextMenuGroupId || "ctool",
                 contextMenuOrder: index++,
                 run: editor => {
+                    if (this.disposed) {
+                        return;
+                    }
                     if (item.run) {
                         const result = item.run(editor, item.id);
                         this.handles[item.id]?.(editor, item.id, result);
@@ -160,8 +180,43 @@ class contextMenu {
         this.handles[id] = handle;
     }
 
+    private setContextKey(id: string, status: boolean) {
+        if (this.disposed) {
+            return null;
+        }
+        const key = this.contextKeys.get(id);
+        if (key) {
+            key.set(status);
+            return key;
+        }
+        try {
+            const created = this.editor.createContextKey(id, status);
+            this.contextKeys.set(id, created);
+            return created;
+        } catch {
+            return null;
+        }
+    }
+
     toggle(id: contextMenuType, status: boolean) {
-        return this.editor.createContextKey(id, status);
+        return this.setContextKey(id, status);
+    }
+
+    dispose() {
+        if (this.disposed) {
+            return;
+        }
+        this.disposed = true;
+        if (this.removeDefaultMenuTimer) {
+            clearTimeout(this.removeDefaultMenuTimer);
+            this.removeDefaultMenuTimer = null;
+        }
+        this.disposables.forEach(item => item.dispose());
+        this.disposables = [];
+        this.contextKeys.clear();
+        Object.keys(this.handles).forEach(key => {
+            delete this.handles[key as contextMenuType];
+        });
     }
 }
 

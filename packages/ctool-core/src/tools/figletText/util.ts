@@ -1,80 +1,70 @@
-export type FigletStyle = "block" | "hash" | "dot";
+import figlet from "./vendor/figlet";
+import Big from "./vendor/fonts/Big";
+import Block from "./vendor/fonts/Block";
+import Doom from "./vendor/fonts/Doom";
+import Slant from "./vendor/fonts/Slant";
+import Small from "./vendor/fonts/Small";
+import Standard from "./vendor/fonts/Standard";
 
-const glyphMap: Record<string, string[]> = {
-    "A": ["01110", "10001", "10001", "11111", "10001", "10001", "10001"],
-    "B": ["11110", "10001", "10001", "11110", "10001", "10001", "11110"],
-    "C": ["01111", "10000", "10000", "10000", "10000", "10000", "01111"],
-    "D": ["11110", "10001", "10001", "10001", "10001", "10001", "11110"],
-    "E": ["11111", "10000", "10000", "11110", "10000", "10000", "11111"],
-    "F": ["11111", "10000", "10000", "11110", "10000", "10000", "10000"],
-    "G": ["01111", "10000", "10000", "10111", "10001", "10001", "01111"],
-    "H": ["10001", "10001", "10001", "11111", "10001", "10001", "10001"],
-    "I": ["11111", "00100", "00100", "00100", "00100", "00100", "11111"],
-    "J": ["00001", "00001", "00001", "00001", "10001", "10001", "01110"],
-    "K": ["10001", "10010", "10100", "11000", "10100", "10010", "10001"],
-    "L": ["10000", "10000", "10000", "10000", "10000", "10000", "11111"],
-    "M": ["10001", "11011", "10101", "10101", "10001", "10001", "10001"],
-    "N": ["10001", "11001", "10101", "10011", "10001", "10001", "10001"],
-    "O": ["01110", "10001", "10001", "10001", "10001", "10001", "01110"],
-    "P": ["11110", "10001", "10001", "11110", "10000", "10000", "10000"],
-    "Q": ["01110", "10001", "10001", "10001", "10101", "10010", "01101"],
-    "R": ["11110", "10001", "10001", "11110", "10100", "10010", "10001"],
-    "S": ["01111", "10000", "10000", "01110", "00001", "00001", "11110"],
-    "T": ["11111", "00100", "00100", "00100", "00100", "00100", "00100"],
-    "U": ["10001", "10001", "10001", "10001", "10001", "10001", "01110"],
-    "V": ["10001", "10001", "10001", "10001", "10001", "01010", "00100"],
-    "W": ["10001", "10001", "10001", "10101", "10101", "11011", "10001"],
-    "X": ["10001", "10001", "01010", "00100", "01010", "10001", "10001"],
-    "Y": ["10001", "10001", "01010", "00100", "00100", "00100", "00100"],
-    "Z": ["11111", "00001", "00010", "00100", "01000", "10000", "11111"],
-    "0": ["01110", "10001", "10011", "10101", "11001", "10001", "01110"],
-    "1": ["00100", "01100", "00100", "00100", "00100", "00100", "01110"],
-    "2": ["01110", "10001", "00001", "00010", "00100", "01000", "11111"],
-    "3": ["01110", "10001", "00001", "00110", "00001", "10001", "01110"],
-    "4": ["00010", "00110", "01010", "10010", "11111", "00010", "00010"],
-    "5": ["11111", "10000", "11110", "00001", "00001", "10001", "01110"],
-    "6": ["00110", "01000", "10000", "11110", "10001", "10001", "01110"],
-    "7": ["11111", "00001", "00010", "00100", "01000", "10000", "10000"],
-    "8": ["01110", "10001", "10001", "01110", "10001", "10001", "01110"],
-    "9": ["01110", "10001", "10001", "01111", "00001", "00010", "11100"],
-    ".": ["00000", "00000", "00000", "00000", "00000", "00110", "00110"],
-    "-": ["00000", "00000", "00000", "11111", "00000", "00000", "00000"],
-    "_": ["00000", "00000", "00000", "00000", "00000", "00000", "11111"],
-    " ": ["00000", "00000", "00000", "00000", "00000", "00000", "00000"],
-    "?": ["01110", "10001", "00001", "00010", "00100", "00000", "00100"],
+export type FigletFont = "Standard" | "Slant" | "Big" | "Block" | "Doom" | "Small";
+export type LegacyFigletStyle = "block" | "hash" | "dot";
+export type FigletStyle = FigletFont | LegacyFigletStyle;
+
+const fontDataMap: Record<FigletFont, string> = {
+    Standard,
+    Slant,
+    Big,
+    Block,
+    Doom,
+    Small,
 };
 
-const styleMap: Record<FigletStyle, { on: string; off: string }> = {
-    block: { on: "@", off: " " },
-    hash: { on: "#", off: " " },
-    dot: { on: "*", off: " " },
+const legacyStyleMap: Record<LegacyFigletStyle, FigletFont> = {
+    block: "Standard",
+    hash: "Block",
+    dot: "Small",
 };
 
-const renderGlyphRow = (bits: string, style: FigletStyle) => {
-    const skin = styleMap[style];
-    return bits
-        .split("")
-        .map(char => (char === "1" ? skin.on : skin.off))
-        .join("");
-};
+const parsedFonts = new Set<string>();
 
-const renderLine = (line: string, style: FigletStyle, spacing: number, uppercase: boolean) => {
-    const source = uppercase ? line.toUpperCase() : line;
-    const chars = source.split("");
-    const rows = Array.from({ length: 7 }).map(() => "");
-
-    for (let rowIndex = 0; rowIndex < 7; rowIndex++) {
-        rows[rowIndex] = chars
-            .map(char => {
-                const key = uppercase ? char.toUpperCase() : char;
-                const glyph = glyphMap[key] || glyphMap["?"];
-                return renderGlyphRow(glyph[rowIndex], style);
-            })
-            .join(" ".repeat(Math.max(1, spacing)))
-            .replace(/\s+$/g, "");
+const normalizeFont = (style: FigletStyle): FigletFont => {
+    if (style in legacyStyleMap) {
+        return legacyStyleMap[style as LegacyFigletStyle];
     }
+    if (style in fontDataMap) {
+        return style as FigletFont;
+    }
+    return "Standard";
+};
 
-    return rows.join("\n");
+const ensureFontsRegistered = () => {
+    for (const [fontName, fontData] of Object.entries(fontDataMap) as [FigletFont, string][]) {
+        if (parsedFonts.has(fontName)) {
+            continue;
+        }
+        figlet.parseFont(fontName, fontData);
+        parsedFonts.add(fontName);
+    }
+};
+
+const addSpacing = (input: string, spacing: number) => {
+    const gap = Math.max(0, spacing - 1);
+    if (gap <= 0) {
+        return input;
+    }
+    return input.split("").join(" ".repeat(gap));
+};
+
+const renderLine = (line: string, font: FigletFont, spacing: number, uppercase: boolean) => {
+    const text = addSpacing(uppercase ? line.toUpperCase() : line, spacing);
+    if (!text) {
+        return "";
+    }
+    return figlet.textSync(text, {
+        font,
+        horizontalLayout: "fitted",
+        verticalLayout: "fitted",
+    });
 };
 
 export const renderFiglet = (
@@ -83,8 +73,10 @@ export const renderFiglet = (
     spacing = 1,
     uppercase = true,
 ) => {
+    ensureFontsRegistered();
+    const font = normalizeFont(style);
     const lines = input.replace(/\r\n/g, "\n").split("\n");
     return lines
-        .map(line => renderLine(line, style, spacing, uppercase))
+        .map(line => renderLine(line, font, spacing, uppercase))
         .join("\n\n");
 };

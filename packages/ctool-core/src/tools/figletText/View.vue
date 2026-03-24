@@ -61,19 +61,35 @@ import { FigletStyle, renderFiglet } from "./util";
 
 const action = useAction(await initialize({
     input: "Ctool-sec",
-    style: "block" as FigletStyle,
+    style: "Standard" as FigletStyle,
     spacing: 1,
     uppercase: true,
     output: "",
 }, { paste: false }));
 
+const legacyStyleMap: Record<string, FigletStyle> = {
+    block: "Standard",
+    hash: "Block",
+    dot: "Small",
+};
+
 const styleOptions = $computed(() => {
     return [
-        { value: "block", label: $t("figletText_style_block") },
-        { value: "hash", label: $t("figletText_style_hash") },
-        { value: "dot", label: $t("figletText_style_dot") },
+        { value: "Standard", label: $t("figletText_style_standard") },
+        { value: "Slant", label: $t("figletText_style_slant") },
+        { value: "Big", label: $t("figletText_style_big") },
+        { value: "Block", label: $t("figletText_style_block") },
+        { value: "Doom", label: $t("figletText_style_doom") },
+        { value: "Small", label: $t("figletText_style_small") },
     ];
 });
+
+const normalizeStyle = () => {
+    const mapped = legacyStyleMap[action.current.style as string];
+    if (mapped) {
+        action.current.style = mapped;
+    }
+};
 
 const generateHandle = () => {
     if (!action.current.input.trim()) {
@@ -92,6 +108,8 @@ const clearHandle = () => {
     action.current.output = "";
     action.save();
 };
+
+normalizeStyle();
 
 if (!action.current.output) {
     generateHandle();
