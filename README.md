@@ -36,27 +36,6 @@ ctool-sec 是基于 Ctool 的网络安全增强版工具箱，面向安全学习
 - 本次还修复了 2 个工具问题：`CIDR 聚合工具`（IPv6 解析）与 `SQLite 在线浏览`（下拉选项 label 报错）。
 - 本次工具调整：下线 `MD5 在线碰撞`，将 `ZIP 密码在线破解` 替换为 `ZIP 伪加密`。
 
-免责声明：仅用于合法授权的安全测试与学习研究，请勿用于未授权攻击。
-
-项目地址：[https://github.com/wpsec/Ctool-sec](https://github.com/wpsec/Ctool-sec)
-
-ref：
-
-[https://github.com/baiy/Ctool](https://github.com/baiy/Ctool)
-
-[https://github.com/3516634930/Payloader](https://github.com/3516634930/Payloader)
-
-## Payloader 兼容说明
-
-- 已内置 `Payloader` 工具，入口：`其他 -> Payloader`
-- `Payloader` 页面直接读取仓库根目录下的数据文件：
-  - `Payloader/src/data/webPayloads.ts`
-  - `Payloader/src/data/intranetPayloads.ts`
-  - `Payloader/src/data/toolCommands.ts`
-- 若需同步最新 payload，可直接更新 `Payloader` 目录后重新构建
-
-> 安全免责声明：Payloader 相关内容仅用于合法授权的安全测试与学习研究，请勿用于未授权攻击。
-
 ## uTools 安装与离线导入
 
 ### 方式一：uTools 内下载
@@ -179,4 +158,5 @@ pnpm --filter ctool-adapter-web run platform-release
 [https://github.com/3516634930/Payloader](https://github.com/3516634930/Payloader)
 
 [https://github.com/wpsec/Ctool-sec](https://github.com/wpsec/Ctool-sec)
+
 https://github.com/chaitin/xtools
