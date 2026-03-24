@@ -1,0 +1,23 @@
+{
+    "description": "Overlay repeated text watermarks on an image for previews, protection, or internal sharing.",
+    "hint": "All watermark rendering happens locally in your browser.",
+    "generate": "Generate",
+    "select_image": "Choose Image",
+    "download": "Download",
+    "text": "Watermark Text",
+    "text_placeholder": "Enter watermark text",
+    "color": "Color",
+    "font_size": "Font Size",
+    "gap_x": "Gap X",
+    "gap_y": "Gap Y",
+    "offset_x": "Offset X",
+    "offset_y": "Offset Y",
+    "source_title": "Source",
+    "output_title": "Result",
+    "source_placeholder": "Choose an image first",
+    "output_placeholder": "The watermarked image will appear here",
+    "error_empty": "Please choose an image first",
+    "error_text_empty": "Please enter watermark text",
+    "error_generate": "Failed to generate the watermarked image",
+    "error_output_empty": "There is no result to download"
+}

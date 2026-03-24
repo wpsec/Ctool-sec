@@ -1,0 +1,14 @@
+{
+    "description": "把彩色图片快速转成灰度黑白图，适合做草图、素材预处理或打印版。",
+    "hint": "灰度值按 RGB 平均值计算，结果会导出为 PNG。",
+    "generate": "生成黑白图",
+    "select_image": "选择图片",
+    "download": "下载图片",
+    "source_title": "原图",
+    "output_title": "灰度结果",
+    "source_placeholder": "请选择图片",
+    "output_placeholder": "黑白化后的结果会显示在这里",
+    "error_empty": "请先选择图片",
+    "error_generate": "图片黑白化失败",
+    "error_output_empty": "当前没有可下载的结果"
+}

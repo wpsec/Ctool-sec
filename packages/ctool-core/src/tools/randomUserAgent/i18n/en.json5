@@ -1,0 +1,22 @@
+{
+    "description": "Generate random User-Agent strings in bulk with browser and platform filters.",
+    "hint": "Useful for UA testing, request header samples, or crawler simulation.",
+    "generate": "Generate User-Agent",
+    "count": "Count",
+    "browsers": "Browsers",
+    "platforms": "Platforms",
+    "browser_chrome": "Chrome",
+    "browser_edge": "Edge",
+    "browser_firefox": "Firefox",
+    "browser_safari": "Safari",
+    "platform_windows": "Windows",
+    "platform_mac": "macOS",
+    "platform_linux": "Linux",
+    "platform_android": "Android",
+    "platform_ios": "iOS",
+    "output_title": "Output",
+    "output_placeholder": "Generate random User-Agent strings from the button above",
+    "error_count": "Count must be greater than 0",
+    "error_browser": "Please select at least one browser",
+    "error_platform": "Please select at least one platform"
+}

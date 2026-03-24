@@ -1,0 +1,9 @@
+{
+    "description": "Generate batches of random IPv4 addresses for testing or demo data.",
+    "hint": "Reserved ranges are not filtered.",
+    "generate": "Generate",
+    "count": "Count",
+    "output_title": "Output",
+    "output_placeholder": "Generate random IPv4 addresses from the button above",
+    "error_count": "Please enter a count greater than 0"
+}

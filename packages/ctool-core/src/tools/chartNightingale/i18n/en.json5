@@ -1,0 +1,18 @@
+{
+    "description": "Render a local nightingale rose chart from name-value pairs and export SVG source.",
+    "hint": "Use a JSON object where keys are labels and values are numbers.",
+    "render": "Render Chart",
+    "title": "Chart Title",
+    "title_placeholder": "Enter title",
+    "legend": "Legend",
+    "legend_label": "Show legend",
+    "label": "Labels",
+    "label_label": "Show name and value",
+    "data_title": "Data Input",
+    "data_placeholder": "Enter JSON object data",
+    "preview_title": "Preview",
+    "preview_placeholder": "Render the chart to see preview",
+    "svg_title": "SVG Source",
+    "svg_placeholder": "SVG source will appear here after rendering",
+    "error_data": "Invalid data format. Please check the JSON input."
+}

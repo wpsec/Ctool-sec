@@ -3,6 +3,7 @@ import {ToolInterface, FeatureInterface, CategoryInterface, ToolType, CategoryTy
 export default class Tool<T extends ToolType = any> implements ToolInterface<T> {
     private readonly _name: T;
     private _parentDirectory: string = "";
+    private _componentPath: string = "";
     private _features: FeatureInterface<T>[] = []
     private _categories: CategoryInterface[] = []
 
@@ -25,6 +26,10 @@ export default class Tool<T extends ToolType = any> implements ToolInterface<T> 
         this._parentDirectory = dir || ""
     }
 
+    set componentPath(path: string) {
+        this._componentPath = path || ""
+    }
+
     get directory() {
         if (this._parentDirectory === "") {
             return `${this._name}`
@@ -34,6 +39,10 @@ export default class Tool<T extends ToolType = any> implements ToolInterface<T> 
 
     get root() {
         return `/tools/${this.directory}`
+    }
+
+    get componentPath() {
+        return this._componentPath
     }
 
     addFeature(feature: FeatureInterface<T>) {

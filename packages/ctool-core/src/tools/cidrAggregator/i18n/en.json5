@@ -1,0 +1,21 @@
+{
+    "description": "Aggregate IPv4 and IPv6 addresses or networks locally into the smallest practical CIDR list.",
+    "hint": "Mixed IP and CIDR input is supported. Adjacent or overlapping ranges are merged automatically.",
+    "aggregate": "Aggregate",
+    "ip_kind": "IP Scope",
+    "ip_kind_both": "IPv4 + IPv6",
+    "ip_kind_ipv4": "IPv4 Only",
+    "ip_kind_ipv6": "IPv6 Only",
+    "reserved": "Reserved Filter",
+    "reserved_label": "Exclude fully reserved ranges",
+    "input_count": "Input items: {0}",
+    "accepted_count": "Accepted: {0}",
+    "output_count": "Output CIDRs: {0}",
+    "input_title": "Input",
+    "input_placeholder": "One IP or CIDR per line, for example 1.1.1.1, 1.1.1.0/24, or 2606:4700:4700::/126",
+    "output_title": "Aggregated Output",
+    "output_placeholder": "Aggregated CIDRs will appear here after running",
+    "invalid_title": "Invalid Input",
+    "invalid_placeholder": "Unrecognized tokens will appear here",
+    "error_empty": "Please enter at least one IP or CIDR"
+}

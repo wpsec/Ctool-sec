@@ -21,6 +21,11 @@ ctool-sec 是基于 Ctool 的网络安全增强版工具箱，面向安全学习
 
 内置常见编码、加解密、校验、转换、生成等开发工具，并新增 Payload 分类，集成大量 Web/内网渗透 Payload 与工具命令速查，支持 WAF/EDR 模式、变量替换和中英切换，提升实战与学习效率。
 
+## 2026-03-25 更新
+- 修复 `CIDR 聚合工具` IPv6 解析异常（`invalid ipv6`）问题，增强常见 IPv6 输入兼容性。
+- 修复 `SQLite 在线浏览` 下拉选项未命中时触发的 `Cannot read properties of undefined (reading 'label')` 报错。
+- 删除 `MD5 在线碰撞` 工具。
+- 删除 `ZIP 密码在线破解` 工具，替换为 `ZIP 伪加密` 工具（本地修改 ZIP 伪加密标志位并支持下载结果）。
 
 
 免责声明：仅用于合法授权的安全测试与学习研究，请勿用于未授权攻击。
@@ -159,4 +164,3 @@ pnpm --filter ctool-adapter-web run platform-release
 [https://github.com/3516634930/Payloader](https://github.com/3516634930/Payloader)
 
 [https://github.com/wpsec/Ctool-sec](https://github.com/wpsec/Ctool-sec)
-

@@ -1,0 +1,13 @@
+{
+    "description": "随机打乱文本内容，可按行内字符乱序，也可按段落顺序乱序。",
+    "hint": "每次生成都会重新随机排列，适合做演示文案或趣味文本。",
+    "generate": "生成乱序文本",
+    "mode_title": "乱序方式",
+    "mode_characters": "文字乱序",
+    "mode_paragraphs": "段落乱序",
+    "input_title": "原文",
+    "output_title": "结果",
+    "input_placeholder": "请输入待处理文本",
+    "output_placeholder": "点击上方按钮生成乱序结果",
+    "error_empty": "请输入待处理文本"
+}

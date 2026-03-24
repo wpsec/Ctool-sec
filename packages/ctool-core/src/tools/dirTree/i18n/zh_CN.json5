@@ -1,0 +1,15 @@
+{
+    "description": "把相对路径列表或本地文件夹转换成目录树文本。",
+    "local_hint": "文件夹解析在本地浏览器完成，不会上传你的文件。",
+    "selected_folder": "当前已选择文件夹: {0}",
+    "select_folder": "选择文件夹",
+    "generate": "生成目录树",
+    "paths_title": "路径列表",
+    "paths_placeholder": "每行一个相对路径，例如 src/main.ts 或 src/components/App.vue",
+    "exclude_title": "排除规则",
+    "exclude_placeholder": "每行一个规则，支持正则或普通包含匹配，例如 node_modules 或 \\.git",
+    "output_title": "目录树结果",
+    "output_placeholder": "点击上方按钮生成目录树",
+    "output_empty": "生成结果为空",
+    "error_empty": "请先输入路径列表或选择文件夹"
+}

@@ -1,0 +1,21 @@
+{
+    "description": "Generate `.htpasswd` entries for HTTP Basic Authentication.",
+    "hint": "Supports bcrypt, SHA1, and plain mode for quick local configuration examples.",
+    "generate": "Generate",
+    "username": "Username",
+    "password": "Password",
+    "username_placeholder": "Enter username",
+    "password_placeholder": "Enter password",
+    "method": "Method",
+    "method_bcrypt": "Bcrypt (Recommended)",
+    "method_sha1": "SHA1 (Legacy)",
+    "method_plain": "Plain",
+    "bcrypt_cost": "Bcrypt Cost",
+    "output_title": ".htpasswd Output",
+    "output_placeholder": "Generated username:hash will appear here",
+    "nginx_title": "Nginx Basic Auth Snippet",
+    "nginx_placeholder": "A basic configuration snippet will appear here",
+    "error_username": "Username is required",
+    "error_password": "Password is required",
+    "error_generate": "Failed to generate htpasswd entry"
+}

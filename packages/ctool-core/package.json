@@ -8,6 +8,9 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@ffmpeg/core": "0.12.6",
+        "@ffmpeg/ffmpeg": "0.12.6",
+        "@ffmpeg/util": "0.12.1",
         "@ltd/j-toml": "^1.38.0",
         "@monaco-editor/loader": "^1.4.0",
         "@prettier/plugin-php": "^0.22.0",

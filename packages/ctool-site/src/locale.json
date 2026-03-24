@@ -8,8 +8,8 @@
         "suggest": "反馈",
         "extension": "插件",
         "application": "应用",
-        "contribution_1": "为 Ctool 做出贡献",
-        "contribution_2": "我们十分期待您通过 Merge Requests 让 Ctool 变的更加完善。"
+        "contribution_1": "为 Ctool-sec 做出贡献",
+        "contribution_2": "我们十分期待您通过 Merge Requests 让 Ctool-sec 变得更加完善。"
     },
     "en": {
         "short_description": "Commonly Used Software Development Tools",
@@ -20,7 +20,7 @@
         "suggest": "Suggest",
         "extension": "Extension",
         "application": "Application",
-        "contribution_1": "Contribute to Ctool",
-        "contribution_2": "We look forward to your Merge Requests to make Ctool more perfect."
+        "contribution_1": "Contribute to Ctool-sec",
+        "contribution_2": "We look forward to your Merge Requests to make Ctool-sec even better."
     }
 }

@@ -1,0 +1,23 @@
+{
+    "description": "把生命按 400 个格子可视化，直观看到已经走过和还剩下的时间。",
+    "hint": "默认按 80 岁寿命粗略估算，仅用于自我提醒和时间感知。",
+    "birth_date": "出生日期",
+    "retirement_age": "退休年龄",
+    "past_title": "已经走过",
+    "remaining_title": "剩余时间",
+    "matrix_title": "人生小格子",
+    "legend_title": "时间占比",
+    "legend_past": "已经走过的生命",
+    "legend_sleep": "未来睡眠时间",
+    "legend_work": "未来工作时间",
+    "legend_children": "陪伴孩子时间",
+    "legend_parents": "陪伴父母时间",
+    "legend_remain": "剩余自由时间",
+    "years": "年",
+    "months": "月",
+    "days": "日",
+    "hours": "时",
+    "minutes": "分",
+    "seconds": "秒",
+    "empty": "请选择出生日期开始计算"
+}

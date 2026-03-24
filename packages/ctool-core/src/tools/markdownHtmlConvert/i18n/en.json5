@@ -1,0 +1,22 @@
+{
+    "description": "Convert Markdown and HTML locally in the browser for quick document cleanup.",
+    "hint": "This version covers common headings, lists, blockquotes, links, and code blocks. Complex styling is preserved as readable text where possible.",
+    "convert": "Convert",
+    "upload": "Upload File",
+    "export": "Export Result",
+    "swap": "Swap Direction",
+    "mode_title": "Conversion",
+    "mode_markdown_to_html": "Markdown -> HTML",
+    "mode_html_to_markdown": "HTML -> Markdown",
+    "markdown_to_html_input_title": "Markdown Input",
+    "markdown_to_html_input_placeholder": "Enter Markdown content",
+    "markdown_to_html_output_title": "HTML Output",
+    "markdown_to_html_output_placeholder": "Converted HTML will appear here",
+    "html_to_markdown_input_title": "HTML Input",
+    "html_to_markdown_input_placeholder": "Enter HTML content",
+    "html_to_markdown_output_title": "Markdown Output",
+    "html_to_markdown_output_placeholder": "Converted Markdown will appear here",
+    "error_empty": "Please enter content to convert",
+    "error_convert": "Conversion failed. Please check the input.",
+    "error_output_empty": "There is no output to export"
+}

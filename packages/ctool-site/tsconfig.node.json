@@ -6,12 +6,21 @@
         ],
         "module": "ESNext",
         "skipLibCheck": true,
+        "baseUrl": ".",
         /* Bundler mode */
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
         "isolatedModules": true,
         "moduleDetection": "force",
         "noEmit": true,
+        "types": [
+            "node"
+        ],
+        "paths": {
+            "ctool-config": [
+                "../ctool-config/dist/index.d.ts"
+            ]
+        },
         /* Linting */
         "strict": true,
         "noUnusedLocals": true,

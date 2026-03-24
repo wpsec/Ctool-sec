@@ -1,5 +1,5 @@
 // 分类 定义
-const _categories = ["encryption", "check", "encoder_decoder", "conversion", "generate", "other", "payload"] as const;
+const _categories = ["image", "binary", "encoder_decoder", "encryption", "security", "development", "json", "format", "text", "media", "office", "other"] as const;
 
 // 工具 - 功能 - 父目录 定义
 export let _tools = {
@@ -207,17 +207,251 @@ export let _tools = {
         feature: ["payloader"],
         parent_directory: "",
     },
+    assetSorting: {
+        feature: ["assetSorting"],
+        parent_directory: "",
+    },
+    imageToBase64: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageWatermark: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageRoundCorner: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    jsonJavaScript: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    zipFakeEncryption: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    morseCode: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    randomIpGenerator: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    gitReference: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    sqliteBrowser: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageUncolor: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imagePixelate: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageConvert: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    hexEditor: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    pycToPy: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    pycToAsm: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    fileIdentify: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    xssVector: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    cidrAggregator: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    leetConvert: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    excalidrawBoard: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageCompress: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    eatWhat: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    htpasswd: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    randomUserAgent: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    jsFuck: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    lessCssConvert: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    markdownHtmlConvert: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageOcr: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    audioFormatConvert: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    videoFormatConvert: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    videoExtractAudio: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    videoFrameCapture: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    videoToGif: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    chartNightingale: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    chartRadar: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    chartLine: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    countdown: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    dirTree: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    randomEmail: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    lifeCount: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    figletText: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    coreValueCodec: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    shuffleText: {
+        feature: ["view"],
+        parent_directory: "",
+    },
+    imageSplit: {
+        feature: ["view"],
+        parent_directory: "",
+    },
 } as const;
 
 // 分类 配置
 export const _categoryTool: Record<CategoryType, ToolType[]> = {
-    encryption: ["hash", "hmac", "aes", "des", "tripleDes", "rc4", "rabbit", "sm2", "sm4", "rsa", "sign", "base64", "bcrypt"],
-    check: ["sign", "regex", "diffs", "crontab", "bcrypt", "dataValidation"],
-    encoder_decoder: ["base64", "url", "unicode", "jwt", "hexString", "html", "gzip", "asn1", "punycode"],
-    conversion: ["json", "pinyin", "radix", "serialize", "unit", "time", "ascii", "variableConversion", "hexString", "arm", "httpSnippet", "color", "urlParse", "dockerCompose", "zhNumber"],
-    generate: ["qrCode", "barcode", "randomString", "uuid", "binary", "ipcalc", "sqlFillParameter", "httpSnippet"],
-    other: ["ip", "code", "websocket", "unit", "text"],
-    payload: ["payloader"],
+    image: [
+        "imageToBase64",
+        "imageWatermark",
+        "imageRoundCorner",
+        "imageUncolor",
+        "imagePixelate",
+        "imageConvert",
+        "imageCompress",
+        "imageOcr",
+        "imageSplit",
+    ],
+    binary: [
+        "radix",
+        "binary",
+        "arm",
+        "dataValidation",
+        "hexEditor",
+        "pycToPy",
+        "pycToAsm",
+        "fileIdentify",
+    ],
+    encoder_decoder: [
+        "base64",
+        "url",
+        "unicode",
+        "jwt",
+        "hexString",
+        "html",
+        "gzip",
+        "punycode",
+        "asn1",
+        "morseCode",
+        "jsFuck",
+        "coreValueCodec",
+    ],
+    encryption: ["hash", "hmac", "aes", "des", "tripleDes", "rc4", "rabbit", "sm2", "sm4", "rsa", "sign", "bcrypt"],
+    security: ["payloader", "assetSorting", "zipFakeEncryption", "xssVector", "htpasswd", "randomUserAgent"],
+    development: [
+        "ip",
+        "regex",
+        "diffs",
+        "crontab",
+        "websocket",
+        "ascii",
+        "ipcalc",
+        "sqlFillParameter",
+        "httpSnippet",
+        "urlParse",
+        "dockerCompose",
+        "gitReference",
+        "sqliteBrowser",
+        "cidrAggregator",
+        "dirTree",
+        "randomIpGenerator",
+    ],
+    json: ["json", "serialize", "jsonJavaScript"],
+    format: ["code", "lessCssConvert", "markdownHtmlConvert"],
+    text: ["pinyin", "variableConversion", "text", "zhNumber", "leetConvert", "figletText", "shuffleText"],
+    media: ["audioFormatConvert", "videoFormatConvert", "videoExtractAudio", "videoFrameCapture", "videoToGif"],
+    office: ["qrCode", "barcode", "chartNightingale", "chartRadar", "chartLine", "excalidrawBoard", "countdown"],
+    other: ["color", "unit", "time", "uuid", "randomString", "randomEmail", "lifeCount", "eatWhat"],
 };
 
 // 默认常用
@@ -236,6 +470,7 @@ export interface ToolInterface<T extends ToolType = ToolType> {
     directory: string;
     root: string;
     parentDirectory: string;
+    componentPath: string;
 
     addFeature(feature: FeatureInterface<T>): void;
 

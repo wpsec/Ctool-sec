@@ -1,0 +1,21 @@
+{
+    "description": "输入维度和数据后本地生成雷达图，并可复制 SVG 源码。",
+    "hint": "维度列表需包含 name 与 max，数据值顺序需和维度顺序一致。",
+    "render": "渲染图表",
+    "title": "图表标题",
+    "title_placeholder": "请输入标题",
+    "shape": "网格形状",
+    "shape_polygon": "多边形",
+    "shape_circle": "圆形",
+    "legend": "图例显示",
+    "legend_label": "显示图例",
+    "indicator_title": "维度输入",
+    "indicator_placeholder": "请输入维度数组，例如 [{ name: \"A\", max: 100 }]",
+    "data_title": "数据输入",
+    "data_placeholder": "请输入 JSON 数据对象",
+    "preview_title": "图表预览",
+    "preview_placeholder": "点击渲染后显示雷达图",
+    "svg_title": "SVG 源码",
+    "svg_placeholder": "渲染成功后这里会显示 SVG 源码",
+    "error_data": "输入格式错误，请检查维度或数据内容"
+}

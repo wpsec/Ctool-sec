@@ -1,0 +1,22 @@
+{
+    "description": "批量生成随机 USER-AGENT 字符串，可按浏览器和平台筛选。",
+    "hint": "适合测试 UA 白名单、爬虫模拟或请求头样例构造。",
+    "generate": "生成 USER-AGENT",
+    "count": "生成数量",
+    "browsers": "浏览器",
+    "platforms": "平台",
+    "browser_chrome": "Chrome",
+    "browser_edge": "Edge",
+    "browser_firefox": "Firefox",
+    "browser_safari": "Safari",
+    "platform_windows": "Windows",
+    "platform_mac": "macOS",
+    "platform_linux": "Linux",
+    "platform_android": "Android",
+    "platform_ios": "iOS",
+    "output_title": "生成结果",
+    "output_placeholder": "点击上方按钮生成随机 USER-AGENT",
+    "error_count": "生成数量必须大于 0",
+    "error_browser": "请至少选择一个浏览器",
+    "error_platform": "请至少选择一个平台"
+}

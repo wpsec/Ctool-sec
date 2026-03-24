@@ -1,3 +1,4 @@
 .DS_Store
 /_release/
+.cache/
 node_modules/

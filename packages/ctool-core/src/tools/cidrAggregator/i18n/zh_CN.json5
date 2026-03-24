@@ -1,0 +1,21 @@
+{
+    "description": "对 IPv4 和 IPv6 地址或网段做本地聚合，输出尽可能精简的 CIDR 列表。",
+    "hint": "支持混合输入 IP 与 CIDR，聚合时会自动合并相邻或重叠的地址段。",
+    "aggregate": "开始聚合",
+    "ip_kind": "聚合范围",
+    "ip_kind_both": "IPv4 + IPv6",
+    "ip_kind_ipv4": "仅 IPv4",
+    "ip_kind_ipv6": "仅 IPv6",
+    "reserved": "保留地址过滤",
+    "reserved_label": "过滤纯保留地址段",
+    "input_count": "输入项: {0}",
+    "accepted_count": "参与聚合: {0}",
+    "output_count": "输出网段: {0}",
+    "input_title": "输入",
+    "input_placeholder": "每行一个 IP 或 CIDR，例如 1.1.1.1、1.1.1.0/24、2606:4700:4700::/126",
+    "output_title": "聚合结果",
+    "output_placeholder": "点击上方按钮后显示聚合后的 CIDR 列表",
+    "invalid_title": "无效输入",
+    "invalid_placeholder": "无法识别的输入项会显示在这里",
+    "error_empty": "请输入至少一个 IP 或 CIDR"
+}

@@ -1,0 +1,14 @@
+{
+    "description": "Encode and decode text using the core socialist values meme codec.",
+    "encode": "Encode",
+    "decode": "Decode",
+    "swap": "Swap",
+    "text_title": "Plain Text",
+    "value_title": "Encoded Values",
+    "text_placeholder": "Enter text to encode",
+    "value_placeholder": "Enter encoded core values text",
+    "error_text_empty": "Please enter text to encode",
+    "error_value_empty": "Please enter text to decode",
+    "error_encode": "Failed to encode the content",
+    "error_decode": "Failed to decode the content"
+}

@@ -1,0 +1,14 @@
+{
+    "description": "Split one image into a grid for social posts, collages, or puzzle-like assets.",
+    "hint": "Click any piece to download it. Batch download triggers one save per piece.",
+    "generate": "Generate",
+    "select_image": "Choose Image",
+    "download_all": "Download All",
+    "rows": "Rows",
+    "cols": "Cols",
+    "format": "Download Format",
+    "empty": "Choose an image and generate the split pieces",
+    "error_empty": "Please choose an image first",
+    "error_generate": "Failed to split the image",
+    "error_output_empty": "There are no pieces to download"
+}

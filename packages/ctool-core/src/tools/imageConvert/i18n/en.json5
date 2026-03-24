@@ -1,0 +1,15 @@
+{
+    "description": "Convert images into common output formats such as PNG, JPEG, and WEBP.",
+    "hint": "Original size: {0}, current output size: {1}",
+    "generate": "Convert",
+    "select_image": "Choose Image",
+    "download": "Download",
+    "format": "Output Format",
+    "source_title": "Source",
+    "output_title": "Result",
+    "source_placeholder": "Choose an image first",
+    "output_placeholder": "The converted image will appear here",
+    "error_empty": "Please choose an image first",
+    "error_generate": "Failed to convert the image",
+    "error_output_empty": "There is no result to download"
+}

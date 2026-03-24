@@ -6,14 +6,14 @@
                     <div class="ctool-logo-image">
                         <Logo />
                     </div>
-                    <span class="ctool-site-name">Ctool</span>
+                    <span class="ctool-site-name">Ctool-sec</span>
                 </a>
                 <div class="ctool-option">
-                    <a href="https://github.com/baiy/ctool" rel="external nofollow noreferrer" target="_blank">
+                    <a :href="repoUrl" rel="external nofollow noreferrer" target="_blank">
                         <img
                             alt="GitHub Repo stars"
                             style="height: 26px; opacity: 0.8"
-                            src="https://img.shields.io/github/stars/baiy/ctool?style=social"
+                            src="https://img.shields.io/github/stars/wpsec/Ctool-sec?style=social"
                         />
                     </a>
                     <a class="ctool-theme ctool-hover-opacity" @click="setting.update('theme')">
@@ -52,8 +52,8 @@
                             {{ translation("download") }}
                         </a>
                     </div>
-                    <a class="ctool-use-time ctool-hover-opacity" href="https://github.com/baiy/ctool">
-                        Ctool v{{ version }} {{ translation("main_last_updated") }}{{ formatDate(buildTimestamp) }}
+                    <a class="ctool-use-time ctool-hover-opacity" :href="repoUrl">
+                        Ctool-sec v{{ version }} {{ translation("main_last_updated") }}{{ formatDate(buildTimestamp) }}
                     </a>
                     <div class="ctool-platform">
                         <Tooltip :content="`Windows ${translation('application')}`">
@@ -173,15 +173,15 @@
             <span></span>
             <h3>{{ translation(`contribution_1`) }}</h3>
             <p>{{ translation(`contribution_2`) }}</p>
-            <a href="https://github.com/wpsec/Ctool-sec" class="ctool-contribution-button ctool-hover-opacity">
+            <a :href="repoUrl" class="ctool-contribution-button ctool-hover-opacity">
                 <Github />
-                <span>Ctool Github</span>
+                <span>Ctool-sec Github</span>
             </a>
-            <a href="https://github.com/baiy/ctool/graphs/contributors" style="text-align: center" target="_blank">
-                <img src="https://contrib.rocks/image?repo=baiy/ctool" style="max-width: 90%" />
+            <a :href="`${repoUrl}/graphs/contributors`" style="text-align: center" target="_blank">
+                <img src="https://contrib.rocks/image?repo=wpsec/Ctool-sec" style="max-width: 90%" />
             </a>
         </section>
-        <p>© {{ new Date().getFullYear() }} Ctool.DEV, All rights reserved.</p>
+        <p>© {{ new Date().getFullYear() }} Ctool-sec, All rights reserved.</p>
     </footer>
 </template>
 
@@ -209,6 +209,7 @@ const pwaInstaller = ref<(() => void) | null>(null);
 const setting = useSetting();
 const keyword = ref("");
 const categories: CategoryInterface[] = _categories;
+const repoUrl = "https://github.com/wpsec/Ctool-sec";
 
 onMounted(() => {
     window.addEventListener("ctool_pwa_install", (event: any) => {

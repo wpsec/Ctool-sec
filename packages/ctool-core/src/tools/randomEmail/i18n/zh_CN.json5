@@ -1,0 +1,22 @@
+{
+    "description": "按长度、字符集和域名后缀批量生成随机邮箱地址。",
+    "hint": "所有结果都在本地浏览器生成，不会发送到服务器。",
+    "generate": "生成邮箱",
+    "count": "生成数量",
+    "min_length": "最小长度",
+    "max_length": "最大长度",
+    "suffix": "域名后缀",
+    "suffix_placeholder": "例如 gmail.com",
+    "charset": "字符集",
+    "charset_number": "数字",
+    "charset_lowercase": "小写字母",
+    "charset_uppercase": "大写字母",
+    "custom_chars": "自定义字符",
+    "custom_chars_placeholder": "可选，直接补充到可用字符池",
+    "output_title": "生成结果",
+    "output_placeholder": "点击上方按钮生成随机邮箱地址",
+    "error_number": "数量和长度都必须是大于 0 的数字",
+    "error_length": "最大长度不能小于最小长度",
+    "error_suffix": "请输入邮箱域名后缀",
+    "error_charset": "请至少选择一种字符集"
+}

@@ -1,6 +1,6 @@
 {
-    "name": "Ctool",
-    "short_name": "Ctool",
+    "name": "Ctool-sec",
+    "short_name": "Ctool-sec",
     "start_url": "/tool.html",
     "display": "standalone",
     "background_color": "#ffffff",

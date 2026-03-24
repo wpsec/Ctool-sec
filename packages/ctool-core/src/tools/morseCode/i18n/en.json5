@@ -1,0 +1,12 @@
+{
+    "description": "Convert between text and Morse code. Unknown characters are kept as-is.",
+    "encode": "Encode",
+    "decode": "Decode",
+    "swap": "Swap",
+    "text_title": "Text",
+    "morse_title": "Morse Code",
+    "text_placeholder": "Enter text to convert",
+    "morse_placeholder": "Enter Morse code. Separate letters with spaces and words with /",
+    "error_text_empty": "Please enter text to encode",
+    "error_morse_empty": "Please enter Morse code to decode"
+}

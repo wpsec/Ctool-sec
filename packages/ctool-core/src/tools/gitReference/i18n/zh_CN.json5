@@ -1,0 +1,12 @@
+{
+    "description": "整理常用 Git 指令和基础术语，支持按命令或说明快速检索。",
+    "hint": "内容为本地静态速查表，适合在提交、分支和回滚时随手查阅。",
+    "search_placeholder": "搜索命令、说明或术语",
+    "clear_search": "清空搜索",
+    "commands_title": "常用指令",
+    "command": "Git 指令",
+    "description_col": "说明",
+    "term": "术语",
+    "glossary_title": "相关术语",
+    "empty": "没有匹配到相关内容"
+}

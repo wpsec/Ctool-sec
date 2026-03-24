@@ -1,0 +1,9 @@
+{
+    "description": "根据输入的 JavaScript 代码生成多种常见 XSS 向量写法，适合做测试样本。",
+    "generate": "生成向量",
+    "input_title": "JavaScript 代码",
+    "output_title": "XSS 向量",
+    "input_placeholder": "例如 alert(document.domain)",
+    "output_placeholder": "点击上方按钮生成 XSS 测试向量",
+    "error_empty": "请输入要嵌入的 JavaScript 代码"
+}

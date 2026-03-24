@@ -1,0 +1,21 @@
+{
+    "description": "Read magic bytes from a file and match common signatures to identify its real type.",
+    "hint": "Results are based on magic-byte matching. Extension and text/binary guess are auxiliary only.",
+    "select_file": "Select File",
+    "name": "File Name",
+    "size": "Size",
+    "extension": "Extension",
+    "text_kind": "Content Hint",
+    "text_kind_text": "Likely text",
+    "text_kind_binary": "Likely binary",
+    "text_kind_unknown": "Unknown",
+    "result_title": "Matches",
+    "result_empty": "Select a file to inspect its type",
+    "column_extension": "Extension",
+    "column_mime": "MIME",
+    "column_type": "Type",
+    "hex_title": "First 128 Bytes in Hex",
+    "hex_placeholder": "The first 128 bytes in hex will appear here",
+    "ascii_title": "First 128 Bytes in ASCII",
+    "ascii_placeholder": "Printable ASCII preview will appear here"
+}

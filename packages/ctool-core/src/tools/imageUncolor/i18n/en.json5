@@ -1,0 +1,14 @@
+{
+    "description": "Convert a color image into a grayscale image for drafts, preprocessing, or print-friendly output.",
+    "hint": "Grayscale is calculated from the RGB average and exported as PNG.",
+    "generate": "Generate",
+    "select_image": "Choose Image",
+    "download": "Download",
+    "source_title": "Source",
+    "output_title": "Grayscale Result",
+    "source_placeholder": "Choose an image first",
+    "output_placeholder": "The grayscale image will appear here",
+    "error_empty": "Please choose an image first",
+    "error_generate": "Failed to convert the image",
+    "error_output_empty": "There is no result to download"
+}

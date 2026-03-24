@@ -1,0 +1,9 @@
+{
+    "description": "批量生成随机 IPv4 地址，适合做测试数据或演示样本。",
+    "hint": "生成结果仅供随机测试使用，不会过滤保留地址段。",
+    "generate": "生成 IP",
+    "count": "生成数量",
+    "output_title": "生成结果",
+    "output_placeholder": "点击上方按钮生成随机 IPv4 地址",
+    "error_count": "请输入大于 0 的数量"
+}

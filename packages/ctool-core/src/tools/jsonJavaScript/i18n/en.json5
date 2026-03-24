@@ -1,0 +1,22 @@
+{
+    "description": "Convert between JSON and JavaScript object literals.",
+    "hint": "Useful for config snippets, object literals, and pretty JSON blocks.",
+    "convert": "Convert",
+    "upload": "Upload",
+    "export": "Export",
+    "swap": "Swap",
+    "mode_title": "Direction",
+    "mode_json_to_js": "JSON -> JavaScript",
+    "mode_js_to_json": "JavaScript -> JSON",
+    "json_to_js_input_title": "JSON Input",
+    "json_to_js_output_title": "JavaScript Output",
+    "js_to_json_input_title": "JavaScript Input",
+    "js_to_json_output_title": "JSON Output",
+    "json_to_js_input_placeholder": "Enter JSON content",
+    "json_to_js_output_placeholder": "Converted JavaScript object literal will appear here",
+    "js_to_json_input_placeholder": "Enter a JavaScript object literal",
+    "js_to_json_output_placeholder": "Converted JSON will appear here",
+    "error_empty": "Please enter content to convert",
+    "error_convert": "Conversion failed. Please check your input",
+    "error_output_empty": "There is no output to export"
+}

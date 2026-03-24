@@ -1,0 +1,15 @@
+{
+    "description": "Add rounded corners to an image for avatars, cards, or quick visual assets.",
+    "hint": "The image is processed locally and exported as PNG to preserve transparent corners.",
+    "generate": "Generate",
+    "select_image": "Choose Image",
+    "download": "Download",
+    "radius": "Radius",
+    "source_title": "Source",
+    "output_title": "Result",
+    "source_placeholder": "Choose an image first",
+    "output_placeholder": "The rounded image will appear here",
+    "error_empty": "Please choose an image first",
+    "error_generate": "Failed to generate the rounded image",
+    "error_output_empty": "There is no result to download"
+}

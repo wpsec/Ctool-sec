@@ -1,0 +1,21 @@
+{
+    "description": "在图片和 Base64 Data URL 之间双向转换，所有处理都在本地完成。",
+    "hint": "编码模式会直接输出 Data URL，解码模式支持粘贴完整 Data URL 或纯 Base64 内容。",
+    "convert": "转换",
+    "select_image": "选择图片",
+    "download_image": "下载图片",
+    "mode_title": "模式",
+    "mode_encode": "图片 -> Base64",
+    "mode_decode": "Base64 -> 图片",
+    "source_image": "原图",
+    "source_placeholder": "请选择一张图片",
+    "output_title": "Base64 结果",
+    "output_placeholder": "转换后的 Data URL 会显示在这里",
+    "input_title": "Base64 输入",
+    "input_placeholder": "请输入完整 Data URL 或纯 Base64 字符串",
+    "preview_title": "图片预览",
+    "preview_placeholder": "转换后的图片会显示在这里",
+    "error_image_empty": "请先选择图片",
+    "error_base64_empty": "请输入 Base64 内容",
+    "error_preview_empty": "当前没有可下载的图片"
+}

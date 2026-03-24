@@ -1,0 +1,19 @@
+{
+    "description": "以十六进制文本方式查看和编辑文件内容，适合快速定位或修改字节。",
+    "hint": "支持直接粘贴十六进制文本，空格、换行和 0x 前缀都会被自动忽略。",
+    "select_file": "选择文件",
+    "format": "格式化并预览",
+    "restore": "恢复原始内容",
+    "download": "下载二进制",
+    "file_name": "文件名",
+    "size": "当前大小",
+    "bytes_per_row": "每行字节数",
+    "input_title": "十六进制输入",
+    "input_placeholder": "可直接粘贴十六进制内容，例如 48 65 6C 6C 6F",
+    "dump_title": "结构化 Hex Dump",
+    "dump_placeholder": "格式化后会在这里显示带偏移量的十六进制预览",
+    "ascii_title": "ASCII 预览",
+    "ascii_placeholder": "格式化后会在这里显示 ASCII 视图",
+    "error_invalid": "十六进制内容无效，请检查字符或长度是否正确",
+    "error_empty": "当前没有可下载的二进制内容"
+}

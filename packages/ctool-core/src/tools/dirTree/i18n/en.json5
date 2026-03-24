@@ -1,0 +1,15 @@
+{
+    "description": "Convert relative paths or a local folder into a directory tree.",
+    "local_hint": "Folder parsing happens locally in your browser and nothing is uploaded.",
+    "selected_folder": "Selected folder: {0}",
+    "select_folder": "Choose Folder",
+    "generate": "Generate Tree",
+    "paths_title": "Path List",
+    "paths_placeholder": "One relative path per line, for example src/main.ts or src/components/App.vue",
+    "exclude_title": "Exclude Rules",
+    "exclude_placeholder": "One rule per line. Supports regex or plain substring matching, for example node_modules or \\.git",
+    "output_title": "Tree Output",
+    "output_placeholder": "Generate the directory tree from the button above",
+    "output_empty": "The generated tree is empty",
+    "error_empty": "Please enter paths or choose a folder first"
+}

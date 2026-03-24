@@ -1,0 +1,10 @@
+{
+    "description": "把候选菜单按行填进去，帮你随机挑一个今天吃什么。",
+    "hint": "当前候选数量: {0}",
+    "pick": "吃什么",
+    "input_title": "候选菜单",
+    "output_title": "随机结果",
+    "input_placeholder": "每行输入一个菜品或餐厅",
+    "output_placeholder": "点击上方按钮随机挑一个",
+    "error_empty": "请先输入至少一个候选项"
+}

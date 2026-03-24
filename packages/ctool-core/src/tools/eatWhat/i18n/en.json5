@@ -1,0 +1,10 @@
+{
+    "description": "Enter one food option per line and let the tool pick what to eat.",
+    "hint": "Current candidates: {0}",
+    "pick": "Pick One",
+    "input_title": "Candidates",
+    "output_title": "Result",
+    "input_placeholder": "One dish or restaurant per line",
+    "output_placeholder": "Pick a result from the button above",
+    "error_empty": "Please enter at least one option"
+}

@@ -1,0 +1,15 @@
+{
+    "description": "将图片转换成常见格式，适合快速处理 PNG、JPEG、WEBP 等导出需求。",
+    "hint": "原图大小: {0}，当前结果大小: {1}",
+    "generate": "转换图片",
+    "select_image": "选择图片",
+    "download": "下载图片",
+    "format": "输出格式",
+    "source_title": "原图",
+    "output_title": "转换结果",
+    "source_placeholder": "请选择图片",
+    "output_placeholder": "转换后的结果会显示在这里",
+    "error_empty": "请先选择图片",
+    "error_generate": "图片格式转换失败",
+    "error_output_empty": "当前没有可下载的结果"
+}

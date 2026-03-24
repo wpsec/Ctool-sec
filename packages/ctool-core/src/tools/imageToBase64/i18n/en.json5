@@ -1,0 +1,21 @@
+{
+    "description": "Convert between images and Base64 Data URLs locally in your browser.",
+    "hint": "Encode mode outputs a Data URL. Decode mode accepts either a full Data URL or raw Base64 text.",
+    "convert": "Convert",
+    "select_image": "Choose Image",
+    "download_image": "Download Image",
+    "mode_title": "Mode",
+    "mode_encode": "Image -> Base64",
+    "mode_decode": "Base64 -> Image",
+    "source_image": "Source Image",
+    "source_placeholder": "Choose an image first",
+    "output_title": "Base64 Output",
+    "output_placeholder": "The converted Data URL will appear here",
+    "input_title": "Base64 Input",
+    "input_placeholder": "Enter a full Data URL or raw Base64 string",
+    "preview_title": "Image Preview",
+    "preview_placeholder": "The decoded image will appear here",
+    "error_image_empty": "Please choose an image first",
+    "error_base64_empty": "Please enter Base64 content",
+    "error_preview_empty": "There is no image to download"
+}

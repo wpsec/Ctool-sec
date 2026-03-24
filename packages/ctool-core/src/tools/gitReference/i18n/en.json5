@@ -1,0 +1,12 @@
+{
+    "description": "A local Git cheat sheet with common commands and core glossary terms.",
+    "hint": "Search commands, descriptions, or Git terms instantly.",
+    "search_placeholder": "Search commands, descriptions, or terms",
+    "clear_search": "Clear Search",
+    "commands_title": "Git Commands",
+    "command": "Command",
+    "description_col": "Description",
+    "term": "Term",
+    "glossary_title": "Glossary",
+    "empty": "No matching content found"
+}

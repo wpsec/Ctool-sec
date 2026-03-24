@@ -1,0 +1,12 @@
+{
+    "description": "支持文本与摩斯电码双向转换，未知字符会原样保留。",
+    "encode": "编码",
+    "decode": "解码",
+    "swap": "交换",
+    "text_title": "文本",
+    "morse_title": "摩斯电码",
+    "text_placeholder": "请输入待转换文本",
+    "morse_placeholder": "请输入待解码的摩斯电码，字符之间用空格分隔，单词之间用 / 分隔",
+    "error_text_empty": "请输入待编码文本",
+    "error_morse_empty": "请输入待解码的摩斯电码"
+}

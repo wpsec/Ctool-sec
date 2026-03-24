@@ -1,0 +1,21 @@
+{
+    "description": "Render line charts locally from multiple data series and export SVG source.",
+    "hint": "Use a JSON object where keys are series names and values are number arrays.",
+    "render": "Render Chart",
+    "title": "Chart Title",
+    "title_placeholder": "Enter title",
+    "x_axis": "X Axis",
+    "x_axis_placeholder": "Use comma separated labels, for example Mon, Tue, Wed",
+    "smooth": "Smooth Curve",
+    "smooth_label": "Enable smoothing",
+    "legend": "Legend",
+    "legend_label": "Show legend",
+    "data_title": "Data Input",
+    "data_placeholder": "Enter JSON object data",
+    "preview_title": "Preview",
+    "preview_placeholder": "Render the chart to see preview",
+    "svg_title": "SVG Source",
+    "svg_placeholder": "SVG source will appear here after rendering",
+    "error_x_axis": "Please provide x-axis labels",
+    "error_data": "Invalid data format. Please check the JSON input."
+}

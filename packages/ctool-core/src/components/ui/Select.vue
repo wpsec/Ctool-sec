@@ -134,10 +134,14 @@ const getOptions = $computed(() => {
 });
 
 const placeholderValue = $computed(() => {
-    if (selected !== "__placeholder__") {
-        return getOptions.filter(item => item.value === selected)[0].label || props.placeholder;
+    if (selected === "__placeholder__") {
+        return props.placeholder;
     }
-    return props.placeholder;
+    const current = getOptions.find(item => item.value === selected);
+    if (current) {
+        return current.label;
+    }
+    return props.placeholder || (selected === undefined || selected === null ? "" : `${selected}`);
 });
 
 const style = $computed(() => {

@@ -1,0 +1,19 @@
+{
+    "description": "Inspect and edit file content as hex text for quick byte-level changes.",
+    "hint": "You can paste hex directly. Spaces, line breaks, and 0x prefixes are ignored automatically.",
+    "select_file": "Select File",
+    "format": "Format & Preview",
+    "restore": "Restore Original",
+    "download": "Download Binary",
+    "file_name": "File Name",
+    "size": "Current Size",
+    "bytes_per_row": "Bytes Per Row",
+    "input_title": "Hex Input",
+    "input_placeholder": "Paste hex content such as 48 65 6C 6C 6F",
+    "dump_title": "Structured Hex Dump",
+    "dump_placeholder": "Formatted dump with offsets will appear here",
+    "ascii_title": "ASCII Preview",
+    "ascii_placeholder": "ASCII preview will appear here after formatting",
+    "error_invalid": "Invalid hex content. Please check the characters and length.",
+    "error_empty": "There is no binary content to download"
+}

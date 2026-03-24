@@ -1,0 +1,17 @@
+{
+    "description": "Render text into local ASCII art for terminal banners, comment headers, or demos.",
+    "hint": "This lightweight built-in font focuses on letters, numbers, and common symbols.",
+    "generate": "Generate",
+    "style": "Style",
+    "style_block": "Block (@)",
+    "style_hash": "Hash (#)",
+    "style_dot": "Dot (*)",
+    "spacing": "Spacing",
+    "uppercase": "Case Handling",
+    "uppercase_label": "Render as uppercase",
+    "input_title": "Input",
+    "input_placeholder": "Enter text to render (multi-line supported)",
+    "output_title": "ASCII Art Output",
+    "output_placeholder": "ASCII art will appear here after generation",
+    "error_empty": "Please enter text to render"
+}

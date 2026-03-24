@@ -1,0 +1,21 @@
+{
+    "description": "输入多组数值后本地渲染折线图，并可复制 SVG 源码。",
+    "hint": "数据格式为 JSON 对象：键是系列名称，值是数值数组。",
+    "render": "渲染图表",
+    "title": "图表标题",
+    "title_placeholder": "请输入标题",
+    "x_axis": "横坐标",
+    "x_axis_placeholder": "用英文或中文逗号分隔，例如 Mon, Tue, Wed",
+    "smooth": "曲线平滑",
+    "smooth_label": "启用平滑曲线",
+    "legend": "图例显示",
+    "legend_label": "显示图例",
+    "data_title": "数据输入",
+    "data_placeholder": "请输入 JSON 数据对象",
+    "preview_title": "图表预览",
+    "preview_placeholder": "点击渲染后显示折线图",
+    "svg_title": "SVG 源码",
+    "svg_placeholder": "渲染成功后这里会显示 SVG 源码",
+    "error_x_axis": "请先填写横坐标",
+    "error_data": "数据格式错误，请检查输入的 JSON 内容"
+}

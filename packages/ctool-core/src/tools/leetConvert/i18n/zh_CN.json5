@@ -1,0 +1,13 @@
+{
+    "description": "把普通文本转换成 Leet 风格文本，支持简单和复杂两种模式。",
+    "convert": "转换",
+    "refresh": "重新生成",
+    "mode_title": "转换模式",
+    "mode_easy": "简单",
+    "mode_complex": "复杂",
+    "input_title": "输入文本",
+    "output_title": "Leet 结果",
+    "input_placeholder": "请输入待转换文本",
+    "output_placeholder": "点击上方按钮生成 Leet 文本",
+    "error_empty": "请输入待转换文本"
+}

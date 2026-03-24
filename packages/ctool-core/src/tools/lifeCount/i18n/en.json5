@@ -1,0 +1,23 @@
+{
+    "description": "Visualize life as 400 blocks to see time spent and time remaining.",
+    "hint": "This is a rough estimate based on an 80-year lifetime.",
+    "birth_date": "Birth Date",
+    "retirement_age": "Retirement Age",
+    "past_title": "Time Passed",
+    "remaining_title": "Time Remaining",
+    "matrix_title": "Life Blocks",
+    "legend_title": "Legend",
+    "legend_past": "Life already lived",
+    "legend_sleep": "Future sleep time",
+    "legend_work": "Future work time",
+    "legend_children": "Time with children",
+    "legend_parents": "Time with parents",
+    "legend_remain": "Remaining free time",
+    "years": "Years",
+    "months": "Months",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "empty": "Select your birth date to start"
+}

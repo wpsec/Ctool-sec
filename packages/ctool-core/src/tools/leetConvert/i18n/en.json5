@@ -1,0 +1,13 @@
+{
+    "description": "Convert plain text into leet-style text with easy and complex modes.",
+    "convert": "Convert",
+    "refresh": "Regenerate",
+    "mode_title": "Mode",
+    "mode_easy": "Easy",
+    "mode_complex": "Complex",
+    "input_title": "Input",
+    "output_title": "Leet Output",
+    "input_placeholder": "Enter text to convert",
+    "output_placeholder": "Generate leet text from the buttons above",
+    "error_empty": "Please enter text to convert"
+}

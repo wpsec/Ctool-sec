@@ -1,0 +1,16 @@
+{
+    "description": "Compress images locally in the browser for smaller exports or lighter assets.",
+    "hint": "Original size: {0}, current output size: {1}",
+    "generate": "Compress",
+    "select_image": "Choose Image",
+    "download": "Download",
+    "quality": "Quality",
+    "format": "Output Format",
+    "source_title": "Source",
+    "output_title": "Compressed Result",
+    "source_placeholder": "Choose an image first",
+    "output_placeholder": "The compressed image will appear here",
+    "error_empty": "Please choose an image first",
+    "error_generate": "Failed to compress the image",
+    "error_output_empty": "There is no result to download"
+}

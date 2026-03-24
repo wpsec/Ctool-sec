@@ -1,0 +1,21 @@
+{
+    "description": "读取文件头字节并匹配常见签名，快速判断文件真实类型。",
+    "hint": "识别结果基于魔数字节匹配，文件名后缀和文本/二进制判断仅作辅助参考。",
+    "select_file": "选择文件",
+    "name": "文件名",
+    "size": "文件大小",
+    "extension": "文件后缀",
+    "text_kind": "内容倾向",
+    "text_kind_text": "更像文本",
+    "text_kind_binary": "更像二进制",
+    "text_kind_unknown": "未知",
+    "result_title": "识别结果",
+    "result_empty": "请选择文件后查看识别结果",
+    "column_extension": "扩展名",
+    "column_mime": "MIME",
+    "column_type": "类型名",
+    "hex_title": "前 128 字节十六进制预览",
+    "hex_placeholder": "选择文件后会显示前 128 字节的十六进制内容",
+    "ascii_title": "前 128 字节 ASCII 预览",
+    "ascii_placeholder": "选择文件后会显示可打印 ASCII 预览"
+}

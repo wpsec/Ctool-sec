@@ -1,0 +1,15 @@
+{
+    "description": "Turn an image into a pixelated mosaic for privacy masking, fun effects, or low-res styling.",
+    "hint": "Larger pixel values create chunkier blocks.",
+    "generate": "Generate",
+    "select_image": "Choose Image",
+    "download": "Download",
+    "size": "Pixel Size",
+    "source_title": "Source",
+    "output_title": "Pixelated Result",
+    "source_placeholder": "Choose an image first",
+    "output_placeholder": "The pixelated image will appear here",
+    "error_empty": "Please choose an image first",
+    "error_generate": "Failed to pixelate the image",
+    "error_output_empty": "There is no result to download"
+}

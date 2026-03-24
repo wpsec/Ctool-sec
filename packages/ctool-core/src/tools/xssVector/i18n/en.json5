@@ -1,0 +1,9 @@
+{
+    "description": "Generate common XSS payload variants from an input JavaScript snippet.",
+    "generate": "Generate",
+    "input_title": "JavaScript",
+    "output_title": "XSS Vectors",
+    "input_placeholder": "For example alert(document.domain)",
+    "output_placeholder": "Generate XSS test vectors from the button above",
+    "error_empty": "Please enter JavaScript code to embed"
+}

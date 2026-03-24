@@ -1,0 +1,13 @@
+{
+    jsFuck_description: "JSFuck 编解码（仅使用 []()!+ 字符）",
+    jsFuck_encode: "编码",
+    jsFuck_decode: "解码",
+    jsFuck_swap: "交换",
+    jsFuck_wrap_eval: "编码后包裹为可直接执行表达式",
+    jsFuck_input_title: "输入",
+    jsFuck_output_title: "输出",
+    jsFuck_input_placeholder: "输入原文或 JSFuck 代码",
+    jsFuck_output_placeholder: "输出结果",
+    jsFuck_error_input_empty: "请输入内容",
+    jsFuck_error_decode_failed: "解码失败",
+}

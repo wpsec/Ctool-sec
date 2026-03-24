@@ -1,7 +1,7 @@
 <template>
     <Card :title="$t('main_ui_setting')" height="100%" padding="20px 10px 10px 30px">
         <template #extra>
-            Ctool v{{ version }} {{ $t(`main_last_updated`) }}{{ lastUpdate }}
+            Ctool-sec v{{ version }} {{ $t(`main_last_updated`) }}{{ lastUpdate }}
         </template>
         <div class="ctool-setting">
             <template v-if="platform.isChromium()">

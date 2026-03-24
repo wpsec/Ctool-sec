@@ -1,0 +1,21 @@
+{
+    "description": "生成可用于 HTTP Basic Authentication 的 .htpasswd 行内容。",
+    "hint": "支持 bcrypt、SHA1 和明文模式，适合本地快速生成或验证配置样例。",
+    "generate": "生成密文",
+    "username": "用户名",
+    "password": "密码",
+    "username_placeholder": "请输入用户名",
+    "password_placeholder": "请输入密码",
+    "method": "加密方式",
+    "method_bcrypt": "Bcrypt（推荐）",
+    "method_sha1": "SHA1（兼容）",
+    "method_plain": "Plain（明文）",
+    "bcrypt_cost": "Bcrypt Cost",
+    "output_title": ".htpasswd 输出",
+    "output_placeholder": "生成的用户名:密文会显示在这里",
+    "nginx_title": "Nginx Basic Auth 配置片段",
+    "nginx_placeholder": "基础配置示例会显示在这里",
+    "error_username": "用户名不能为空",
+    "error_password": "密码不能为空",
+    "error_generate": "生成失败，请检查输入参数"
+}

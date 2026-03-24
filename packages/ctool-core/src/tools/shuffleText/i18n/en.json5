@@ -1,0 +1,13 @@
+{
+    "description": "Randomize text by shuffling characters within each line or by shuffling paragraph order.",
+    "hint": "Each run produces a fresh randomized result.",
+    "generate": "Shuffle",
+    "mode_title": "Shuffle Mode",
+    "mode_characters": "Characters",
+    "mode_paragraphs": "Paragraphs",
+    "input_title": "Input",
+    "output_title": "Output",
+    "input_placeholder": "Enter text to shuffle",
+    "output_placeholder": "Generate shuffled text from the button above",
+    "error_empty": "Please enter text to shuffle"
+}

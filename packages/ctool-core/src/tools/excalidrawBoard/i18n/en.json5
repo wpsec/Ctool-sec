@@ -1,0 +1,13 @@
+{
+    "description": "A local whiteboard with pen, eraser, undo, and PNG export.",
+    "hint": "Useful for quick sketches and temporary flow notes without external services.",
+    "undo": "Undo",
+    "clear": "Clear Canvas",
+    "export": "Export PNG",
+    "mode": "Tool Mode",
+    "mode_pen": "Pen",
+    "mode_eraser": "Eraser",
+    "stroke": "Stroke Width",
+    "color": "Brush Color",
+    "canvas_title": "Canvas"
+}

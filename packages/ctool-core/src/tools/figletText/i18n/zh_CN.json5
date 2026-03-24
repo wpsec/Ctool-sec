@@ -1,0 +1,17 @@
+{
+    "description": "把文本渲染成本地字符画，适合做终端标题、注释头或演示素材。",
+    "hint": "当前内置轻量点阵字体，优先支持英文字母、数字和常见符号。",
+    "generate": "生成字符画",
+    "style": "渲染风格",
+    "style_block": "Block (@)",
+    "style_hash": "Hash (#)",
+    "style_dot": "Dot (*)",
+    "spacing": "字符间距",
+    "uppercase": "大小写处理",
+    "uppercase_label": "转为大写后渲染",
+    "input_title": "输入文本",
+    "input_placeholder": "请输入要转换的文本，可换行",
+    "output_title": "字符画输出",
+    "output_placeholder": "点击上方按钮后会在这里生成字符画",
+    "error_empty": "请输入要转换的文本"
+}

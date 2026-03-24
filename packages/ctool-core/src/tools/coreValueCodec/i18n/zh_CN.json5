@@ -1,0 +1,14 @@
+{
+    "description": "使用社会主义核心价值观文本对内容进行编码和解码，适合做趣味化隐藏传输。",
+    "encode": "编码",
+    "decode": "解码",
+    "swap": "交换",
+    "text_title": "原文",
+    "value_title": "核心价值观编码",
+    "text_placeholder": "请输入待编码文本",
+    "value_placeholder": "请输入待解码的核心价值观文本",
+    "error_text_empty": "请输入待编码文本",
+    "error_value_empty": "请输入待解码内容",
+    "error_encode": "编码失败",
+    "error_decode": "解码失败，请检查输入内容"
+}

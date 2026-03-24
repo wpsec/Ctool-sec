@@ -1,0 +1,11 @@
+{
+    "description": "自动从混合文本中提取 URL 地址、子域名、IP 地址和主域名，并自动去重。",
+    "root_domain_hint": "主域名按常见公共后缀规则识别，适合大多数常见场景。",
+    "input_title": "资产输入",
+    "input_placeholder": "粘贴任意资产文本，例如扫描结果、日志、URL 列表、域名清单或混合内容。",
+    "output_placeholder": "暂无提取结果",
+    "urls": "URL 地址",
+    "subdomains": "子域名",
+    "ips": "IP 地址",
+    "root_domains": "主域名"
+}

@@ -1,0 +1,22 @@
+{
+    "description": "Generate random email addresses by length, character set, and domain suffix.",
+    "hint": "Everything is generated locally in your browser.",
+    "generate": "Generate",
+    "count": "Count",
+    "min_length": "Min Length",
+    "max_length": "Max Length",
+    "suffix": "Domain Suffix",
+    "suffix_placeholder": "For example gmail.com",
+    "charset": "Character Sets",
+    "charset_number": "Numbers",
+    "charset_lowercase": "Lowercase",
+    "charset_uppercase": "Uppercase",
+    "custom_chars": "Custom Characters",
+    "custom_chars_placeholder": "Optional characters appended to the pool",
+    "output_title": "Output",
+    "output_placeholder": "Generate random email addresses from the button above",
+    "error_number": "Count and lengths must be numbers greater than 0",
+    "error_length": "Max length must be greater than or equal to min length",
+    "error_suffix": "Please enter an email domain suffix",
+    "error_charset": "Please select at least one character set"
+}

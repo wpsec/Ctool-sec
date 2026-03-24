@@ -1,0 +1,21 @@
+{
+    "description": "Generate radar charts locally from indicator and series data, then export SVG source.",
+    "hint": "Indicators must include `name` and `max`. Series values must follow the same indicator order.",
+    "render": "Render Chart",
+    "title": "Chart Title",
+    "title_placeholder": "Enter title",
+    "shape": "Grid Shape",
+    "shape_polygon": "Polygon",
+    "shape_circle": "Circle",
+    "legend": "Legend",
+    "legend_label": "Show legend",
+    "indicator_title": "Indicator Input",
+    "indicator_placeholder": "Enter indicator array, for example [{ name: \"A\", max: 100 }]",
+    "data_title": "Data Input",
+    "data_placeholder": "Enter JSON object data",
+    "preview_title": "Preview",
+    "preview_placeholder": "Render the chart to see preview",
+    "svg_title": "SVG Source",
+    "svg_placeholder": "SVG source will appear here after rendering",
+    "error_data": "Invalid input format. Please check indicators and data."
+}

@@ -20,6 +20,9 @@ export default class Feature<T extends ToolType = ToolType> implements FeatureIn
     }
 
     getComponentPath() {
+        if (this.tool.componentPath) {
+            return this.tool.componentPath
+        }
         return `${this.tool.root}/${upperFirst(this.name)}.vue`
     }
 

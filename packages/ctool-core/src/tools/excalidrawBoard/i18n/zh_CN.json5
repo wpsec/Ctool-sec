@@ -1,0 +1,13 @@
+{
+    "description": "本地手绘白板，支持画笔、橡皮、撤销和导出 PNG。",
+    "hint": "适合快速草图、流程示意或临时标注，不依赖外部服务。",
+    "undo": "撤销",
+    "clear": "清空画布",
+    "export": "导出 PNG",
+    "mode": "工具模式",
+    "mode_pen": "画笔",
+    "mode_eraser": "橡皮",
+    "stroke": "笔触宽度",
+    "color": "画笔颜色",
+    "canvas_title": "绘图区域"
+}

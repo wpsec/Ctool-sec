@@ -22,9 +22,15 @@ export type CategoryInterface<T extends CategoryType = CategoryType> = _Category
 export type FeatureInterface<T extends ToolType = ToolType> = _FeatureInterface<T>
 
 // @ts-ignore
-const toolContainer: { [key in ToolType]: ToolInterface<key> } = mapValues(_tools, (value, name) => {
+const toolContainer: { [key in ToolType]: ToolInterface<key> } = mapValues(_tools, (rawValue, name) => {
+    const value = rawValue as {
+        parent_directory: string;
+        component_path?: string;
+        feature: readonly string[];
+    };
     const tool = new Tool(name as ToolType);
     tool.parentDirectory = value.parent_directory;
+    tool.componentPath = value.component_path || "";
     for (let feature of value.feature) {
         new Feature(tool, feature as FeatureType);
     }

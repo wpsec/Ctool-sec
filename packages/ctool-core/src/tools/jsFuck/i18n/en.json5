@@ -1,0 +1,13 @@
+{
+    jsFuck_description: "JSFuck encode/decode (using only []()!+ characters)",
+    jsFuck_encode: "Encode",
+    jsFuck_decode: "Decode",
+    jsFuck_swap: "Swap",
+    jsFuck_wrap_eval: "Wrap output as executable expression",
+    jsFuck_input_title: "Input",
+    jsFuck_output_title: "Output",
+    jsFuck_input_placeholder: "Enter plain text or JSFuck code",
+    jsFuck_output_placeholder: "Output result",
+    jsFuck_error_input_empty: "Please enter content",
+    jsFuck_error_decode_failed: "Decode failed",
+}
