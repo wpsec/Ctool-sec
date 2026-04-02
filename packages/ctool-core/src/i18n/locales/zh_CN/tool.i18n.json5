@@ -106,5 +106,7 @@
     "punycode_encoder": "编码",
     "punycode_decoder": "解码",
     "payloader": "Payloader",
-    "payloader_payloader_keywords": "渗透测试,payload,内网,web,安全,命令速查"
+    "payloader_payloader_keywords": "渗透测试,payload,内网,web,安全,命令速查",
+    "assetSorting": "资产分拣",
+    "assetSorting_assetSorting_keywords": "资产分拣,url,子域名,主域名,域名,ip,安全,资产识别"
 }

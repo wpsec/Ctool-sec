@@ -207,6 +207,10 @@ export let _tools = {
         feature: ["payloader"],
         parent_directory: "",
     },
+    assetSorting: {
+        feature: ["assetSorting"],
+        parent_directory: "",
+    },
 } as const;
 
 // 分类 配置
@@ -217,7 +221,7 @@ export const _categoryTool: Record<CategoryType, ToolType[]> = {
     conversion: ["json", "pinyin", "radix", "serialize", "unit", "time", "ascii", "variableConversion", "hexString", "arm", "httpSnippet", "color", "urlParse", "dockerCompose", "zhNumber"],
     generate: ["qrCode", "barcode", "randomString", "uuid", "binary", "ipcalc", "sqlFillParameter", "httpSnippet"],
     other: ["ip", "code", "websocket", "unit", "text"],
-    payload: ["payloader"],
+    payload: ["payloader", "assetSorting"],
 };
 
 // 默认常用

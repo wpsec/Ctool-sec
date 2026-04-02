@@ -59,7 +59,7 @@ onUnmounted(() => {
 .ctool-bottom {
     height: 33px;
     box-sizing: border-box;
-    padding: 0 10px 0 5px;
+    padding: 0 10px;
     display: grid;
     column-gap: 5px;
     grid-template-columns: minmax(0px, 1fr) auto;

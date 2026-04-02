@@ -49,6 +49,8 @@ let items: ItemType[] = $ref<ItemType[]>([])
 const CACHE_NAME = 'notice_cache_items';
 const CACHE_EXPIRY = 1800;
 const CACHE_EMPTY_EXPIRY = 3600 * 24;
+const CURRENT_REPO_URL = "https://github.com/wpsec/Ctool-sec";
+const CURRENT_ISSUES_URL = `${CURRENT_REPO_URL}/issues/new`;
 
 let toggleTimer: any = null;
 
@@ -109,7 +111,7 @@ const open = (item: ItemType) => {
     }
     if (item.url.type === "web") {
         if (isString(item.url.value)) {
-            return openUrl(item.url.value)
+            return openUrl(normalizeWebUrl(item.url.value, item.text))
         }
     }
     if (item.url.type === "tool") {
@@ -118,6 +120,24 @@ const open = (item: ItemType) => {
             isString(item.url.value) ? "" : item.url.value.feature
         )
     }
+}
+
+const normalizeWebUrl = (url: string, text: string) => {
+    const loweredUrl = url.toLowerCase();
+    const loweredText = text.toLowerCase();
+
+    if (loweredUrl.includes("github.com/baiy/ctool")) {
+        if (loweredUrl.includes("/issues") || loweredUrl.includes("/discussions")) {
+            return CURRENT_ISSUES_URL;
+        }
+        return url.replace(/https?:\/\/github\.com\/baiy\/ctool/i, CURRENT_REPO_URL);
+    }
+
+    if (/(问题|建议|反馈|issue|suggest)/i.test(loweredText) && loweredUrl.includes("github.com")) {
+        return CURRENT_ISSUES_URL;
+    }
+
+    return url;
 }
 
 const mouseover = () => {

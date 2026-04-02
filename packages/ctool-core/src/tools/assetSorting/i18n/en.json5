@@ -1,0 +1,11 @@
+{
+    "description": "Extract URLs, subdomains, IP addresses, and root domains from mixed text with automatic deduplication.",
+    "root_domain_hint": "Root domains are detected with common public suffix rules, which works well for most common cases.",
+    "input_title": "Asset Input",
+    "input_placeholder": "Paste mixed asset text such as scan results, logs, URL lists, domain lists, or other mixed content.",
+    "output_placeholder": "No extracted results yet",
+    "urls": "URLs",
+    "subdomains": "Subdomains",
+    "ips": "IP Addresses",
+    "root_domains": "Root Domains"
+}

@@ -96,5 +96,7 @@
     "punycode_encoder": "Encoder",
     "punycode_decoder": "Decoder",
     "payloader": "Payloader",
-    "payloader_payloader_keywords": "pentest,payload,intranet,web,security,command reference"
+    "payloader_payloader_keywords": "pentest,payload,intranet,web,security,command reference",
+    "assetSorting": "Asset Sorting",
+    "assetSorting_assetSorting_keywords": "asset sorting,url,subdomain,root domain,domain,ip,security,recon"
 }

@@ -232,10 +232,10 @@ import { computed, ref, watch } from "vue";
 import useSetting from "@/store/setting";
 import { DEFAULT_LOCALE } from "@/i18n";
 import { copy } from "@/helper/clipboard";
-import type { I18nText, PayloadExecution, PayloadItem, ToolCommand } from "../../../../../Payloader/src/types";
-import { webPayloads } from "../../../../../Payloader/src/data/webPayloads";
-import { intranetPayloads } from "../../../../../Payloader/src/data/intranetPayloads";
-import { toolCommands } from "../../../../../Payloader/src/data/toolCommands";
+import type { I18nText, PayloadExecution, PayloadItem, ToolCommand } from "./types";
+import { webPayloads } from "./data/webPayloads";
+import { intranetPayloads } from "./data/intranetPayloads";
+import { toolCommands } from "./data/toolCommands";
 
 type ActiveTab = "payloads" | "tools";
 type BypassMode = "normal" | "waf" | "edr";

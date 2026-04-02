@@ -1,10 +1,12 @@
 # 程序开发常用工具 - 网络安全版（Ctool-sec）
 
-在原版 Ctool 基础上集成 Payloader 数据，面向网络安全学习与授权测试场景。当前优先支持 `uTools` 下载和离线导入。
+在原版 Ctool 基础上集成 `Payloader` 与 `资产分拣`，面向网络安全学习与授权测试场景。当前优先支持 `uTools` 下载和离线导入。
 
-## Payloader 兼容说明
+## 安全工具说明
 
-- 已内置 `Payloader` 工具，入口：`其他 -> Payloader`
+- 已内置安全工具，入口：`安全`
+- `Payloader`：用于 Web/内网 payload 与常见工具命令速查
+- `资产分拣`：用于从混合文本中自动提取 URL、子域名、IP 与主域名
 - `Payloader` 页面直接读取仓库根目录下的数据文件：
   - `Payloader/src/data/webPayloads.ts`
   - `Payloader/src/data/intranetPayloads.ts`
