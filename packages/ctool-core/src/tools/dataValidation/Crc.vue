@@ -24,7 +24,7 @@ import {initialize, useAction} from "@/store/action";
 import {createTextInput} from "@/components/text";
 import {crc, result, crcTypeLists, CrcType} from "./util";
 import {watch} from "vue";
-import Input from "@/components/text/input";
+import type Input from "@/components/text/input";
 
 const action = useAction(await initialize<{ input: Input, type: CrcType }>({
     input: createTextInput('hex', ""),
